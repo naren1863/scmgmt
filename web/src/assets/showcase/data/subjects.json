@@ -1,0 +1,57 @@
+{
+    "data": [
+        {"subjectid": "SUB001","facultyid": "CL001", "subject": "Physics"},
+		{"subjectid": "SUB002","facultyid": "CL001", "subject": "Chemistry"},
+		{"subjectid": "SUB003","facultyid": "CL001", "subject": "Maths"},
+		{"subjectid": "SUB004","facultyid": "CL001", "subject": "Biology"},
+		{"subjectid": "SUB005","facultyid": "CL001", "subject": "Statistics"},
+		{"subjectid": "SUB006","facultyid": "CL001", "subject": "Computer Science"},
+		{"subjectid": "SUB007","facultyid": "CL001", "subject": "Kannada"},
+		{"subjectid": "SUB008","facultyid": "CL001", "subject": "Hindi"},
+		{"subjectid": "SUB009","facultyid": "CL001", "subject": "English"},
+		{"subjectid": "SUB010","facultyid": "CL001", "subject": "Sanskrit"},
+		
+		{"subjectid": "SUB011","facultyid": "CL004", "subject": "Physics"},
+		{"subjectid": "SUB012","facultyid": "CL004", "subject": "Chemistry"},
+		{"subjectid": "SUB013","facultyid": "CL004", "subject": "Maths"},
+		{"subjectid": "SUB014","facultyid": "CL004", "subject": "Biology"},
+		{"subjectid": "SUB015","facultyid": "CL004", "subject": "Statistics"},
+		{"subjectid": "SUB016","facultyid": "CL004", "subject": "Computer Science"},
+		{"subjectid": "SUB017","facultyid": "CL004", "subject": "Kannada"},
+		{"subjectid": "SUB018","facultyid": "CL004", "subject": "Hindi"},
+		{"subjectid": "SUB019","facultyid": "CL004", "subject": "English"},
+		{"subjectid": "SUB020","facultyid": "CL004", "subject": "Sanskrit"},
+		
+		{"subjectid": "SUB021","facultyid": "CL002", "subject": "Economics"},
+		{"subjectid": "SUB022","facultyid": "CL002", "subject": "Finance"},
+		{"subjectid": "SUB023","facultyid": "CL002", "subject": "Income Tax"},
+		{"subjectid": "SUB024","facultyid": "CL002", "subject": "Kannada"},
+		{"subjectid": "SUB025","facultyid": "CL002", "subject": "Hindi"},
+		{"subjectid": "SUB026","facultyid": "CL002", "subject": "English"},
+		{"subjectid": "SUB027","facultyid": "CL002", "subject": "Sanskrit"},
+		
+		{"subjectid": "SUB028","facultyid": "CL005", "subject": "Economics"},
+		{"subjectid": "SUB029","facultyid": "CL005", "subject": "FInance"},
+		{"subjectid": "SUB030","facultyid": "CL005", "subject": "Income Tax"},
+		{"subjectid": "SUB031","facultyid": "CL005", "subject": "Kannada"},
+		{"subjectid": "SUB032","facultyid": "CL005", "subject": "Hindi"},
+		{"subjectid": "SUB033","facultyid": "CL005", "subject": "English"},
+		{"subjectid": "SUB034","facultyid": "CL005", "subject": "Sanskrit"},
+		
+		{"subjectid": "SUB035","facultyid": "CL003", "subject": "History"},
+		{"subjectid": "SUB036","facultyid": "CL003", "subject": "Law"},
+		{"subjectid": "SUB037","facultyid": "CL003", "subject": "Constitution"},
+		{"subjectid": "SUB038","facultyid": "CL003", "subject": "Kannada"},
+		{"subjectid": "SUB039","facultyid": "CL003", "subject": "Hindi"},
+		{"subjectid": "SUB040","facultyid": "CL003", "subject": "English"},
+		{"subjectid": "SUB041","facultyid": "CL003", "subject": "Sanskrit"},
+		
+		{"subjectid": "SUB042","facultyid": "CL006", "subject": "History"},
+		{"subjectid": "SUB043","facultyid": "CL006", "subject": "Law"},
+		{"subjectid": "SUB044","facultyid": "CL006", "subject": "Constitution"},
+		{"subjectid": "SUB045","facultyid": "CL006", "subject": "Kannada"},
+		{"subjectid": "SUB046","facultyid": "CL006", "subject": "Hindi"},
+		{"subjectid": "SUB047","facultyid": "CL006", "subject": "English"},
+		{"subjectid": "SUB048","facultyid": "CL006", "subject": "Sanskrit"}
+    ]
+}

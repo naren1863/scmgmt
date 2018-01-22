@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="25px" viewBox="0 0 20 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_note_add_black_24px" fill-rule="nonzero" fill="#4990E2">
+            <path d="M5,21.25 L2.5,21.25 L2.5,18.75 L5,18.75 L5,21.25 Z M5,17.5 L2.5,17.5 L2.5,15 L5,15 L5,17.5 Z M5,13.75 L2.5,13.75 L2.5,11.25 L5,11.25 L5,13.75 Z M13.75,21.25 L7.5,21.25 L7.5,18.75 L13.75,18.75 L13.75,21.25 Z M17.5,17.5 L7.5,17.5 L7.5,15 L17.5,15 L17.5,17.5 Z M17.5,13.75 L7.5,13.75 L7.5,11.25 L17.5,11.25 L17.5,13.75 Z M12.5,0 L2.5,0 C1.125,0 0.0125,1.125 0.0125,2.5 L0,22.5 C0,23.875 1.1125,25 2.4875,25 L17.5,25 C18.875,25 20,23.875 20,22.5 L20,7.5 L12.5,0 Z M11.25,8.75 L11.25,1.875 L18.125,8.75 L11.25,8.75 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

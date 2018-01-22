@@ -1,0 +1,22 @@
+<div>
+    
+</div>
+<p-accordion>
+    <div class="row" *ngFor="let staff of staffs">                        
+        <p-accordionTab header="{{staff.fname}} {{staff.lname}}" >
+                <div class="ui-g">
+                    <div class="ui-g-2 ui-sm-6">Name: </div>
+                    <div class="ui-g-10 ui-sm-6">{{staff.fname}} {{staff.lname}}</div>
+                    
+                    <div class="ui-g-2 ui-sm-6">Date of Birth: </div>
+                    <div class="ui-g-10 ui-sm-6">{{staff.dob}}</div>
+                    
+                    <div class="ui-g-2 ui-sm-6">Email: </div>
+                    <div class="ui-g-10 ui-sm-6">{{staff.mail}}</div>
+                    
+                    <div class="ui-g-2 ui-sm-6">Qualification: </div>
+                    <div class="ui-g-10 ui-sm-6">{{staff.degree}} in {{staff.stream}}</div>
+                </div>
+        </p-accordionTab>
+    </div>
+</p-accordion>

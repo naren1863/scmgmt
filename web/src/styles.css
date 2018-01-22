@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*group*/
+
+p-menubar .menu-bar, .multi-panel1 div.ui-panel-content,.vertical-panel1 div.ui-panel-content,
+.vertical-panel2 div.ui-panel-content,.wrapper2 div.ui-panel-content {
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+p-menubar .menu-bar
+ {
+	height: 5em;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+p-menubar .title {
+	position: absolute;
+	left: 5px;
+	right: 5px;
+}
+
+p-menubar .title h1{
+	margin-bottom: 0px;
+}
+
+.header {
+	text-align: center;
+	font-size: 25px;
+}
+
+.ui-panel-titlebar {
+	display: none;
+}
+
+p-accordion {
+	width: 100%;
+	margin: 5px;
+}
+
+hr {
+	border-top: #D5D5D5;
+}
+
+p-header {
+	display: flex;
+	justify-content: center;
+}
+
+.top-header div {
+	display: flex;
+}
+
+.top-header label {
+	display: flex;
+	width: 60%;
+}
+
+.ui-state-default a {
+	text-decoration: none;
+}
+
+.ui-accordion .ui-accordion-header, .ui-accordion .ui-accordion-content .ui-widget-content {
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.ui-accordion .ui-accordion-content .ui-widget-content div .ui-widget-content,
+.wrapper2 ui-panel ui-widget ui-widget-content {
+	box-shadow: 0 0px 0px;
+}
+
+.icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 10px;
+}
+
+.ui-panel {
+	padding: 0 !important;
+	margin: 5px;
+}
+
+.top-header div {
+  display: flex;
+}
+
+.top-header label {
+  display: flex;
+  width: 40%;
+}
+
+.ui-dropdown {
+	width: 80%
+}
+
+.ui-blockui {
+	background: white;
+}
+
+a.info {
+	padding: 0;
+}
+.ui-inputtext {
+	width: 178px;
+}
+
+.subheader {
+	text-align: left;
+	font-size: 1em;
+}
+
+p-accordion.invoice-accordion {
+	width: 33%;
+}
+p-accordion.booking-accordion {
+	width: 66%;
+}
+
+.ship-image {
+	width: 120px;
+	height: 40px;
+}
+.detail-icon {
+	width: 25px;
+	height: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.warning-icon {
+	width: 70px;
+	height: 50px;
+	padding-left: 3px;
+	padding-right: 3px;
+}

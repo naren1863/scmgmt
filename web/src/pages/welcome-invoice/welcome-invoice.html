@@ -1,0 +1,52 @@
+<p-blockUI [target]="invoicestep1" [blocked]="display">
+  <div style="position:absolute;top:25%;left:50%">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br>
+  </div>
+</p-blockUI>
+<p-menubar styleClass="menu-bar">
+  <div class="title">
+    <h1>
+      Welcome to CBS School!!
+    </h1>
+  </div>
+  
+</p-menubar>  
+
+<div class="home-div">
+<div>
+    <p-panel>
+        <p-header> Home </p-header>
+          Home Description
+          <br/>
+              Welcome to CBS School
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+    </p-panel>
+</div>
+<div>
+    <p-panel>
+        <p-header>Admin Login</p-header>
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-md-12">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" pInputText placeholder="Username">         
+                    </div>
+                </div>
+                <div class="ui-g ui-fluid">
+                  <div class="ui-g-12 ui-md-12">
+                    <div class="ui-inputgroup">
+                      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+                      <input type="text" pInputText placeholder="Password">         
+                    </div>
+                  </div>
+                </div>
+            </div>    
+            <button pButton type="button" icon="fa-login" (click)="onLogin()" label="Login" class="ui-button-info"></button>
+        
+      
+    </p-panel>
+</div>
+</div>

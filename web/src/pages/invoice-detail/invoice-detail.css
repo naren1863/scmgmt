@@ -1,0 +1,35 @@
+.center-div {
+    display: grid;
+    grid-gap: 5px;
+    align-items: center;
+    width: 55%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .invoice-group-header {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .invoice-group-body a {
+    color: dodgerblue;
+    text-decoration: none;
+  }
+
+  .required:after { 
+    content:"*";
+    color: red;
+   }
+  
+   .radio-button {
+     /* margin-left: -30px; */
+     margin-right: 10px;
+   }
+  
+   .radio-field-label {
+     margin-left: 35px;
+   }
+   .radio-field-field {
+    margin-left: 35px;
+  }

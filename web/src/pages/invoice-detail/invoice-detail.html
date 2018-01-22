@@ -1,0 +1,64 @@
+<p-blockUI [target]="invoicestep1" [blocked]="display">
+        <div style="position:absolute;top:25%;left:50%">
+          <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br>
+        </div>
+      </p-blockUI>
+      <p-menubar styleClass="menu-bar">
+        <div class="title">
+          <h1>
+            CBS School Administration
+          </h1>
+        </div>
+        <p-menu #menu popup="popup" [model]="items2"></p-menu>
+        <div align="right">
+          <button type="button" pButton icon="fa fa-list" label="Themes" (click)="menu.toggle($event)"></button>
+        </div>
+        <div>Welcome Admin!</div>
+      </p-menubar>
+      <br>
+      <div class="center-div">
+          <div></div>
+            <p-fieldset legend="Add Student">
+                <div class="center-div">
+                    <div class="invoice-group-header">
+                            <label class="required">First Name</label><br>
+                            <input id="input" type="text" size="30" pInputText> 
+                    </div>
+                    <div class="invoice-group-header">
+                            <label class="required">Middle Name</label><br>
+                            <input id="input" type="text" size="30" pInputText> 
+                    </div>
+                    <div class="invoice-group-header">
+                            <label class="required">Last Name</label><br>
+                            <input id="input" type="text" size="30" pInputText> 
+                    </div>
+                </div>       
+                <div class="center-div">
+                        <label class="required">Gender</label>
+                        <input type="radio" name="gender" value="male"/>   
+                        <input type="radio" name="gender" value="male"/>
+                        
+                        <label class="required">Date of Birth</label>
+
+                        <label class="required">Father Name</label>
+                        <label class="required">Father Occupation</label>
+                        <label class="required">Mother Name</label>
+                        <label class="required">Father Occupation</label>
+                        
+                        <label class="required">Address</label>
+                        <label class="required">City</label>
+                        <label class="required">State</label>
+                        <label class="required">Pin Code</label>
+                        <label class="required">Mobile</label>
+                        <label class="required">Email</label>
+                        
+                    Joining Class
+                    Photo Upload
+
+                        
+
+                </div>    
+                    
+            </p-fieldset>   
+      </div>
+        

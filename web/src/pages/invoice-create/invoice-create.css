@@ -1,0 +1,78 @@
+.invoice-group-header {
+    display: -webkit-inline-box;
+    grid-gap: 10px;
+    border-color: yellow;
+    padding: 10px;    
+    border-spacing: 2px;
+    border-width: 0px;
+    border-style: groove;
+    border-radius: 2mm;
+    width: 100%;
+
+    
+  }
+  
+  .headingLabel{
+    font-family: 'Franklin Gothic Medium';
+    font-style: italic;
+    color: chocolate;
+    font-size: 5ex;
+    padding-bottom: 5px;
+    align-self: center;
+
+  }
+  .leftPanel {
+   
+    height: 30%;
+    border-color: gray;
+    border-spacing: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: groove;
+    border-radius: 2mm;
+
+  }
+  .withBorder {
+    
+    width: 50%;
+    height: 30%;
+    border-color: gray;
+    border-spacing: 10px;
+    padding: 10px;
+    border-width: 2px;
+    border-style: groove;
+    border-radius: 2mm;
+    
+  }
+  .invoice-group-body a {
+    color: dodgerblue;
+    text-decoration: none;
+  }
+  
+  .top-header label {
+    display: flex;
+    width: 55%;
+  }
+  
+.required:after { 
+  content:"*";
+  color: red;
+ }
+
+ .radio-button {
+   /* margin-left: -30px; */
+   margin-right: 10px;
+ }
+
+ .radio-field-label {
+   margin-left: 35px;
+ }
+ .radio-field-field {
+  margin-left: 35px;
+}
+
+.main-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 20% 75%;
+}

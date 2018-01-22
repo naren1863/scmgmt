@@ -1,0 +1,95 @@
+{
+	"data": [{
+			"staffid": "000001",
+			"fname": "Deeksh",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "deek@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+			}
+		},
+		{
+			"staffid": "000002",
+			"fname": "Prajwal",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Prajwal@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000003",
+			"fname": "Nitesh",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Nitesh@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000004",
+			"fname": "Shwetha",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Shwetha@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000005",
+			"fname": "Prasad",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Prasad@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000006",
+			"fname": "Praveen",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Praveen@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000007",
+			"fname": "Kavi",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Kavi@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000008",
+			"fname": "Kumar",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Kumar@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		},
+		{
+			"staffid": "000009",
+			"fname": "Sowbhagya",
+			"lname": "Hugar",
+			"dob": "20-1-2349",
+			"mail": "Sowbhagya@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		}
+
+	]
+}

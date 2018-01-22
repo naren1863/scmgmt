@@ -1,0 +1,61 @@
+<p-dataTable [value]="students" selectionMode="single" 
+    [(selection)]="selectedStud" (onRowSelect)="onRowSelect($event)" 
+    [paginator]="false" rows="15" [responsive]="true">
+  <p-header>Students</p-header>
+  <p-column field="fname" header="First Name" [sortable]="false"></p-column>
+  <p-column field="lname" header="Last Name" [sortable]="false"></p-column>
+  <p-column field="standard" header="Class" [sortable]="false"></p-column>
+  <p-column field="dob" header="Age" [sortable]="false"></p-column>
+  <p-column field="mail" header="Email Id" [sortable]="false"></p-column>
+  <p-column field="mobile" header="Mobile Number" [sortable]="false"></p-column>
+
+  <p-footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+      <button type="button" pButton icon="fa-plus" style="float:left" 
+        (click)="showDialogToAdd()" label="Add"></button>
+    </div>
+  </p-footer>
+</p-dataTable>
+
+
+<p-dialog header="Student Details" [(visible)]="displayDialog" 
+    [responsive]="true" showEffect="fade" [modal]="true">
+<div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="student">
+  <div class="ui-grid-row">
+      <div class="ui-grid-col-4"><label for="fname">Name:</label></div>
+      <div class="ui-grid-col-8" style="font-weight: bold">
+        {{student.fname}} {{student.lname}}
+      </div>
+  </div>
+  <div class="ui-grid-row">
+      <div class="ui-grid-col-4"><label for="dob">Age:</label></div>
+      <div class="ui-grid-col-8">
+          {{student.dob}}
+      </div>
+  </div>
+  <div class="ui-grid-row">
+    <div class="ui-grid-col-4"><label for="standard">Section</label></div>
+    <div class="ui-grid-col-8">
+        {{student.standard}}
+    </div>
+  </div>
+  <div class="ui-grid-row">
+      <div class="ui-grid-col-4"><label for="mail">Email</label></div>
+      <div class="ui-grid-col-8">
+          <input pInputText id="mail" [(ngModel)]="student.mail" />
+      </div>
+  </div>
+  <div class="ui-grid-row">
+      <div class="ui-grid-col-4"><label for="mobile">Mobile Number</label></div>
+      <div class="ui-grid-col-8">
+          <input pInputText id="mobile" [(ngModel)]="student.mobile" />
+      </div>
+  </div>
+</div>
+<p-footer>
+  <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button" pButton icon="fa-close" (click)="delete()" label="Delete"></button>
+      <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+  </div>
+ </p-footer>
+</p-dialog> 

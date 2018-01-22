@@ -1,0 +1,14 @@
+{
+    "data":[
+        {"studentid": "STUD0001","fname":"Deeksh","lname":"Hugar","standard":"Sc-PUCI-A","dob":"20-1-2349","mail": "deek@gmail.com", "mobile": "9666696666", 		"parentid": "123"},
+		{"studentid": "STUD0002","fname":"Prajwal","lname":"Hugar","standard":"Sc-PUCI-B","dob":"20-1-2349","mail": "Prajwal@gmail.com", "mobile": "9666696666", 		"parentid": "124"},
+		{"studentid": "STUD0003","fname":"Nitesh","lname":"Hugar","standard":"Co-PUCI-A","dob":"20-1-2349","mail": "Nitesh@gmail.com", "mobile": "9666696666", 		"parentid": "124"},
+		{"studentid": "STUD0004","fname":"Shwetha","lname":"Hugar","standard":"Sc-PUCII-A","dob":"20-1-2349","mail": "Shwetha@gmail.com", "mobile": "9666696666", 		"parentid": "125"},
+		{"studentid": "STUD0005","fname":"Prasad","lname":"Hugar","standard":"Sc-PUCI-A","dob":"20-1-2349","mail": "Prasad@gmail.com", "mobile": "9666696666", 		"parentid": "125"},
+		{"studentid": "STUD0006","fname":"Praveen","lname":"Hugar","standard":"Sc-PUCI-A","dob":"20-1-2349","mail": "Praveen@gmail.com", "mobile": "9666696666", 		"parentid": "125"},
+		{"studentid": "STUD0007","fname":"Kavi","lname":"Hugar","standard":"Co-PUCII-A","dob":"20-1-2349","mail": "Kavi@gmail.com", "mobile": "9666696666", 		"parentid": "126"},
+		{"studentid": "STUD0008","fname":"Kumar","lname":"Hugar","standard":"Sc-PUCII-A","dob":"20-1-2349","mail": "Kumar@gmail.com", "mobile": "9666696666", 		"parentid": "127"},
+		{"studentid": "STUD0009","fname":"Sowbhagya","lname":"Hugar","standard":"Ar-PUCI-A","dob":"20-1-2349","mail": "Sowbhagya@gmail.com", "mobile": "9666696666", 		"parentid": "128"}
+
+    ]
+}
