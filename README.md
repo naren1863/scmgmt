@@ -1,0 +1,2 @@
+# scmgmt
+School Management System
