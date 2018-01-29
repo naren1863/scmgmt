@@ -1,0 +1,14 @@
+{
+    "data": [
+        {"subjectid": "SUB001","facultyid": "CL001", "subject": "Physics"},
+		{"subjectid": "SUB002","facultyid": "CL001", "subject": "Chemistry"},
+		{"subjectid": "SUB003","facultyid": "CL001", "subject": "Maths"},
+		{"subjectid": "SUB004","facultyid": "CL001", "subject": "Biology"},
+		{"subjectid": "SUB005","facultyid": "CL001", "subject": "Statistics"},
+		{"subjectid": "SUB006","facultyid": "CL001", "subject": "Computer Science"},
+		{"subjectid": "SUB007","facultyid": "CL001", "subject": "Kannada"},
+		{"subjectid": "SUB008","facultyid": "CL001", "subject": "Hindi"},
+		{"subjectid": "SUB009","facultyid": "CL001", "subject": "English"},
+		{"subjectid": "SUB010","facultyid": "CL001", "subject": "Sanskrit"}
+    ]
+}

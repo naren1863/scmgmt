@@ -1,0 +1,11 @@
+{
+    "data": [
+		{"subjectid": "SUB042","facultyid": "CL006", "subject": "History"},
+		{"subjectid": "SUB043","facultyid": "CL006", "subject": "Law"},
+		{"subjectid": "SUB044","facultyid": "CL006", "subject": "Constitution"},
+		{"subjectid": "SUB045","facultyid": "CL006", "subject": "Kannada"},
+		{"subjectid": "SUB046","facultyid": "CL006", "subject": "Hindi"},
+		{"subjectid": "SUB047","facultyid": "CL006", "subject": "English"},
+		{"subjectid": "SUB048","facultyid": "CL006", "subject": "Sanskrit"}
+    ]
+}

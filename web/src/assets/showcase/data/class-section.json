@@ -5,6 +5,7 @@
 		{"classsectionid": "CLS003","facultyid": "CL003", "section": "A"},
 		{"classsectionid": "CLS004","facultyid": "CL004", "section": "A"},
 		{"classsectionid": "CLS005","facultyid": "CL005", "section": "A"},
-		{"classsectionid": "CLS006","facultyid": "CL006", "section": "A"}
+		{"classsectionid": "CLS006","facultyid": "CL006", "section": "A"},
+		{"classsectionid": "CLS007","facultyid": "CL006", "section": "B"}
     ]
 }

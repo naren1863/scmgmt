@@ -1,0 +1,11 @@
+{
+    "data": [
+        {"subjectid": "SUB021","facultyid": "CL002", "subject": "Economics"},
+		{"subjectid": "SUB022","facultyid": "CL002", "subject": "Finance"},
+		{"subjectid": "SUB023","facultyid": "CL002", "subject": "Income Tax"},
+		{"subjectid": "SUB024","facultyid": "CL002", "subject": "Kannada"},
+		{"subjectid": "SUB025","facultyid": "CL002", "subject": "Hindi"},
+		{"subjectid": "SUB026","facultyid": "CL002", "subject": "English"},
+		{"subjectid": "SUB027","facultyid": "CL002", "subject": "Sanskrit"}
+    ]
+}

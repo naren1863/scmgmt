@@ -1,0 +1,14 @@
+{
+	"data": [
+		{
+			"staffid": "STF0007",
+			"fname": "Kavi",
+			"lname": "Jeer",
+			"dob": "20-1-2349",
+			"mail": "Kavi@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		}
+	]
+}

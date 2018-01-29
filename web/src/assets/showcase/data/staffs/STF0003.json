@@ -1,0 +1,15 @@
+{
+	"data": [
+		{
+			"staffid": "STF0003",
+			"fname": "Nitesh",
+			"lname": "Jeer",
+			"dob": "20-1-2349",
+			"mail": "Nitesh@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		}
+
+	]
+}

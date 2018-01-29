@@ -1,0 +1,15 @@
+{
+	"data": [
+		{
+			"staffid": "STF0006",
+			"fname": "Praveen",
+			"lname": "Jeer",
+			"dob": "20-1-2349",
+			"mail": "Praveen@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+		}
+
+	]
+}

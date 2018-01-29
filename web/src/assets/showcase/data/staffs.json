@@ -1,6 +1,6 @@
 {
 	"data": [{
-			"staffid": "000001",
+			"staffid": "STF0001",
 			"fname": "Deeksh",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
@@ -11,17 +11,17 @@
 
 		},
 		{
-			"staffid": "000002",
+			"staffid": "STF0002",
 			"fname": "Prajwal",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
 			"mail": "Prajwal@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BE",
+			"degree": "BSc",
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000003",
+			"staffid": "STF0003",
 			"fname": "Nitesh",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
@@ -31,17 +31,17 @@
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000004",
+			"staffid": "STF0004",
 			"fname": "Shwetha",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
 			"mail": "Shwetha@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BE",
+			"degree": "BCom",
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000005",
+			"staffid": "STF0005",
 			"fname": "Prasad",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
@@ -51,7 +51,7 @@
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000006",
+			"staffid": "STF0006",
 			"fname": "Praveen",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
@@ -61,7 +61,7 @@
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000007",
+			"staffid": "STF0007",
 			"fname": "Kavi",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
@@ -71,7 +71,7 @@
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000008",
+			"staffid": "STF0008",
 			"fname": "Kumar",
 			"lname": "Jeer",
 			"dob": "20-1-2349",
@@ -81,7 +81,7 @@
 			"stream": "Mech."
 		},
 		{
-			"staffid": "000009",
+			"staffid": "STF0009",
 			"fname": "Sowbhagya",
 			"lname": "Jeer",
 			"dob": "20-1-2349",

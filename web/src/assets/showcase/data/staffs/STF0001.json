@@ -1,0 +1,14 @@
+{
+	"data": [{
+			"staffid": "STF0001",
+			"fname": "Deeksh",
+			"lname": "Jeer",
+			"dob": "20-1-2349",
+			"mail": "deek@gmail.com",
+			"mobile": "9666696666",
+			"degree": "BE",
+			"stream": "Mech."
+
+		}
+	]
+}
