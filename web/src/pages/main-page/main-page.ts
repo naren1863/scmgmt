@@ -23,7 +23,6 @@ export class studCreateComponent extends BasePage {
   selectedclasses: string = '';
   billofLading: string = '';
   classesclassesReferenceNumber: string = '';
-  classesclassesReferenceNumber: string = '';
 
   classesText: string = '';
   classesTextBU: string;

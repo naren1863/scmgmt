@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { studCreateComponent } from '../pages/main-page/main-page';
 import { studDetailComponent } from '../pages/student/student';
-import { WelcomestudComponent } from '../pages/welcome-stud/welcome-stud';
+import { WelcomestudComponent } from '../pages/welcome-page/welcome-page';
 
 const appRoutes: Routes = [
   { path: 'student', component: studDetailComponent },

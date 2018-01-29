@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-welcome-stud',
-  templateUrl: './welcome-stud.html',
-  styleUrls: ['./welcome-stud.css']
+  selector: 'app-welcome-page',
+  templateUrl: './welcome-page.html',
+  styleUrls: ['./welcome-page.css']
 })
 export class WelcomestudComponent implements OnInit {
 
