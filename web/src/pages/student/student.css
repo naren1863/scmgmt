@@ -6,13 +6,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .invoice-group-header {
+  .stud-group-header {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .invoice-group-body a {
+  .stud-group-body a {
     color: dodgerblue;
     text-decoration: none;
   }

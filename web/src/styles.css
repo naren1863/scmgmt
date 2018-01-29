@@ -112,10 +112,10 @@ a.info {
 	font-size: 1em;
 }
 
-p-accordion.invoice-accordion {
+p-accordion.stud-accordion {
 	width: 33%;
 }
-p-accordion.booking-accordion {
+p-accordion.classes-accordion {
 	width: 66%;
 }
 

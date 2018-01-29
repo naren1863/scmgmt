@@ -1,14 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { InvoiceCreateComponent } from '../pages/invoice-create/invoice-create';
-import { InvoiceDetailComponent } from '../pages/invoice-detail/invoice-detail';
-import { WelcomeInvoiceComponent } from '../pages/welcome-invoice/welcome-invoice';
+import { studCreateComponent } from '../pages/main-page/main-page';
+import { studDetailComponent } from '../pages/student/student';
+import { WelcomestudComponent } from '../pages/welcome-stud/welcome-stud';
 
 const appRoutes: Routes = [
-  { path: 'invoice-detail', component: InvoiceDetailComponent },
-  { path: 'invoice-create', component: InvoiceCreateComponent },
-  { path: '**', component: WelcomeInvoiceComponent }
+  { path: 'student', component: studDetailComponent },
+  { path: 'main-page', component: studCreateComponent },
+  { path: '**', component: WelcomestudComponent }
  
 ];
 

@@ -3,18 +3,18 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { BasePage } from '../base-page/base-page';
 @Component({
-  selector: 'app-invoice-detail',
-  templateUrl: './invoice-detail.html',
-  styleUrls: ['./invoice-detail.css']
+  selector: 'app-student',
+  templateUrl: './student.html',
+  styleUrls: ['./student.css']
 })
-export class InvoiceDetailComponent extends BasePage {
+export class studDetailComponent extends BasePage {
 
-  invoiceId: string;
+  studId: string;
   constructor(private route: ActivatedRoute) { 
     super();
     route.queryParamMap.subscribe((params: ParamMap) => {
-      const invoiceIdParam = params.get('invoiceId');
-      this.invoiceId = invoiceIdParam;
+      const studIdParam = params.get('studId');
+      this.studId = studIdParam;
     });
   }
 

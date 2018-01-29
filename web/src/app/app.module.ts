@@ -27,9 +27,9 @@ import {
 
 import { SidebarModule } from 'ng-sidebar';
 import {AppComponent} from './app.component';
-import {InvoiceCreateComponent} from '../pages/invoice-create/invoice-create';
-import {InvoiceDetailComponent} from '../pages/invoice-detail/invoice-detail';
-import {WelcomeInvoiceComponent} from '../pages/welcome-invoice/welcome-invoice';
+import {studCreateComponent} from '../pages/main-page/main-page';
+import {studDetailComponent} from '../pages/student/student';
+import {WelcomestudComponent} from '../pages/welcome-stud/welcome-stud';
 import { ClassesComponent } from '../pages/classes/classes';
 import { SubjectsComponent } from '../pages/subjects/subjects';
 import { StudentsComponent } from '../pages/students/students';
@@ -43,9 +43,9 @@ import { StaffService } from '../pages/staffs/staffservice';
 @NgModule({
   declarations: [
     AppComponent,
-    InvoiceCreateComponent,
-    InvoiceDetailComponent,
-    WelcomeInvoiceComponent,
+    studCreateComponent,
+    studDetailComponent,
+    WelcomestudComponent,
     ClassesComponent,
     SubjectsComponent,
     StudentsComponent,

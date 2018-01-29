@@ -1,4 +1,4 @@
-.invoice-group-header {
+.stud-group-header {
     display: -webkit-inline-box;
     grid-gap: 10px;
     border-color: yellow;
@@ -44,7 +44,7 @@
     border-radius: 2mm;
     
   }
-  .invoice-group-body a {
+  .stud-group-body a {
     color: dodgerblue;
     text-decoration: none;
   }

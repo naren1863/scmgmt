@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-welcome-invoice',
-  templateUrl: './welcome-invoice.html',
-  styleUrls: ['./welcome-invoice.css']
+  selector: 'app-welcome-stud',
+  templateUrl: './welcome-stud.html',
+  styleUrls: ['./welcome-stud.css']
 })
-export class WelcomeInvoiceComponent implements OnInit {
+export class WelcomestudComponent implements OnInit {
 
   totalCost: number = 100;
   totalCostSpinner: number = 300;
@@ -24,6 +24,6 @@ export class WelcomeInvoiceComponent implements OnInit {
   }
 
   onLogin(){
-    this.router.navigate(["invoice-create"]);
+    this.router.navigate(["main-page"]);
   }
 }

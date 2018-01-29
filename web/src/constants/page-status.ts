@@ -1,4 +1,4 @@
-export enum InvoiceStatus {
+export enum studStatus {
 	
     DRAFT_IMPORT = 1,
     DRAFT = 2,

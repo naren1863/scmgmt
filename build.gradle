@@ -1,0 +1,73 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+plugins {
+	id "com.moowork.node" version "0.12"
+  }
+  
+  
+  node {
+	  version = '6.9.0'
+	  npmVersion = '3.10.8'
+	  download = true
+	  workDir = file("${rootProject.projectDir}/web/nodejs")
+  }
+  
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.naren'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	runtime('mysql:mysql-connector-java')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+task installWebDependency(type: NpmTask) {
+	
+		this.project.afterEvaluate {
+			getInputs().file(file("${rootProject.projectDir}/web/package.json"))
+			getOutputs().dir(file("${rootProject.projectDir}/web/node_modules"))
+			setWorkingDir(file("${rootProject.projectDir}/web"))
+		}
+	
+		args = ['install']
+	}
+	task buildWeb(type: NpmTask, dependsOn: 'installWebDependency') {
+	
+		this.project.afterEvaluate {
+			getInputs().file(file("${rootProject.projectDir}/web"))
+			getOutputs().dir(file("${rootProject.projectDir}/web/node_modules"))
+			setWorkingDir(file("${rootProject.projectDir}/web"))
+		}
+	
+		args = ['run', 'build']
+	}
+	
+	task copyWeb(type: Copy) {
+		from 'web/dist/'
+		into '/build/resources/main/static'
+	}
+	
+	processResources.dependsOn copyWeb
+	copyWeb.dependsOn buildWeb

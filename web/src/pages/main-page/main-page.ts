@@ -6,29 +6,29 @@ import { MenuItem } from 'primeng/primeng';
 
 import { BasePage } from '../base-page/base-page';
 @Component({
-  selector: 'app-invoice-create',
-  templateUrl: './invoice-create.html',
-  styleUrls: ['./invoice-create.css']
+  selector: 'app-main-page',
+  templateUrl: './main-page.html',
+  styleUrls: ['./main-page.css']
 })
-export class InvoiceCreateComponent extends BasePage {
+export class studCreateComponent extends BasePage {
 
-  carrierBU: string = '';
+  classesBU: string = '';
   businessUnit: string;
-  carrierBuList: SelectItem[] =[];
+  classesBuList: SelectItem[] =[];
   buFVList: any[] = [];
   buList: SelectItem[] =[];
 
-  selectedBookingKey: string = '';
-  bookingList: SelectItem[] = [];
-  selectedBooking: string = '';
+  selectedclassesKey: string = '';
+  classesList: SelectItem[] = [];
+  selectedclasses: string = '';
   billofLading: string = '';
-  carrierBookingReferenceNumber: string = '';
-  shipperBookingReferenceNumber: string = '';
+  classesclassesReferenceNumber: string = '';
+  classesclassesReferenceNumber: string = '';
 
-  carrierText: string = '';
-  carrierTextBU: string;
-  carriers: SelectItem[]= [];
-  carriersList: string[] = [];
+  classesText: string = '';
+  classesTextBU: string;
+  classess: SelectItem[]= [];
+  classessList: string[] = [];
   
   showClasses:boolean = true;
   showSubjects:boolean = false;
@@ -50,9 +50,9 @@ export class InvoiceCreateComponent extends BasePage {
  
   isValid(): Promise<boolean> {
     let valid = false;
-    this.carriers.forEach((carrier: SelectItem)=> {
-      if (this.carrierText == carrier.label) {
-        this.carrierTextBU = carrier.value;
+    this.classess.forEach((classes: SelectItem)=> {
+      if (this.classesText == classes.label) {
+        this.classesTextBU = classes.value;
         valid = true;
         return valid;
       }
@@ -65,7 +65,7 @@ export class InvoiceCreateComponent extends BasePage {
   }
 
   getDisabled(field:string) {
-    if (this.selectedBookingKey && this.selectedBookingKey == field) {
+    if (this.selectedclassesKey && this.selectedclassesKey == field) {
       return false;
     }
     return true;
@@ -75,15 +75,15 @@ export class InvoiceCreateComponent extends BasePage {
     console.log("onBUSelect");
   }
 
-  showRetrieveBooking() {
-    let retVal = !(this.selectedBooking && this.selectedBooking.length > 0 
+  showRetrieveclasses() {
+    let retVal = !(this.selectedclasses && this.selectedclasses.length > 0 
             && this.businessUnit && this.businessUnit.length > 0 
-            && this.carrierText && this.carrierText.length >0);
+            && this.classesText && this.classesText.length >0);
     return retVal;
   }
 
   addStudent(){
-    this.router.navigate(["invoice-detail"]);
+    this.router.navigate(["student"]);
   }
   showProject(msg){
     if(msg == 'Classes'){
