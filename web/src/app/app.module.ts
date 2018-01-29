@@ -29,7 +29,7 @@ import { SidebarModule } from 'ng-sidebar';
 import {AppComponent} from './app.component';
 import {studCreateComponent} from '../pages/main-page/main-page';
 import {studDetailComponent} from '../pages/student/student';
-import {WelcomestudComponent} from '../pages/welcome-stud/welcome-stud';
+import {WelcomestudComponent} from '../pages/welcome-page/welcome-page';
 import { ClassesComponent } from '../pages/classes/classes';
 import { SubjectsComponent } from '../pages/subjects/subjects';
 import { StudentsComponent } from '../pages/students/students';
