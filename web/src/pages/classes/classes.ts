@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Car} from '../classes/car';
-import {CarService} from '../classes/carservice';
+import {Class} from '../classes/class';
+import {ClassService} from '../classes/classservice';
 
 
 @Component({
@@ -11,22 +11,22 @@ import {CarService} from '../classes/carservice';
 export class ClassesComponent implements OnInit {
   
       displayDialog: boolean;
-      car: Car = new PrimeCar();
-      selectedCar: Car;
+      car: Class = new PrimeClass();
+      selectedCar: Class;
       
       newCar: boolean;
   
-      cars: Car[];
+      cars: Class[];
   
-      constructor(private carService: CarService) { }
+      constructor(private carService: ClassService) { }
   
       ngOnInit() {
-          this.carService.getCarsSmall().then(cars => this.cars = cars);
+          this.carService.getClassSsections().then(cars => this.cars = cars);
       }
       
       showDialogToAdd() {
           this.newCar = true;
-          this.car = new PrimeCar();
+          this.car = new PrimeClass();
           this.displayDialog = true;
       }
       
@@ -55,8 +55,8 @@ export class ClassesComponent implements OnInit {
           this.displayDialog = true;
       }
       
-      cloneCar(c: Car): Car {
-          let car = new PrimeCar();
+      cloneCar(c: Class): Class {
+          let car = new PrimeClass();
           for(let prop in c) {
               car[prop] = c[prop];
           }
@@ -68,7 +68,7 @@ export class ClassesComponent implements OnInit {
       }
   }
   
-  class PrimeCar implements Car {
+  class PrimeClass implements Class {
       
-      constructor(public stream?, public grade?, public section?) {}
+      constructor(public classsectionid?,public stream?, public grade?, public section?) {}
   }

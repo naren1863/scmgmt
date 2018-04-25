@@ -1,0 +1,9 @@
+Students Page:
+	Sorting Based on Names
+	Have dropdown for classes in the header with apply button.  Ex. SCI-PUCI-A, COM-PUCI-A. Should be filterable with classes.
+	Implement create Logic. Write underlying logic to create the respective json
+	Edit option to edit contact info for now. Write underlying logic to update the respective json.
+	Add more columns and change class column as displayable. Ex. SCI-PUCI-A. 
+	Later: 
+		Implement Import Logic.
+

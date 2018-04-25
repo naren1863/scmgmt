@@ -1,11 +1,11 @@
 {
     "data": [
-        {"classsectionid": "CLS001","facultyid": "CL001", "section": "A"},
-		{"classsectionid": "CLS002","facultyid": "CL002", "section": "A"},
-		{"classsectionid": "CLS003","facultyid": "CL003", "section": "A"},
-		{"classsectionid": "CLS004","facultyid": "CL004", "section": "A"},
-		{"classsectionid": "CLS005","facultyid": "CL005", "section": "A"},
-		{"classsectionid": "CLS006","facultyid": "CL006", "section": "A"},
-		{"classsectionid": "CLS007","facultyid": "CL006", "section": "B"}
-    ]
+        {"classsectionid": "CLS001","facultyid": "CL001", "section": "A", "stream": "Science", "grade": "PUC I"},
+		{"classsectionid": "CLS002","facultyid": "CL002", "section": "A", "stream": "Commerce", "grade": "PUC I"},
+		{"classsectionid": "CLS003","facultyid": "CL003", "section": "A", "stream": "Arts", "grade": "PUC I"},
+		{"classsectionid": "CLS004","facultyid": "CL004", "section": "A","stream": "Science", "grade": "PUC II"},
+		{"classsectionid": "CLS005","facultyid": "CL005", "section": "A","stream": "Commerce", "grade": "PUC II"},
+		{"classsectionid": "CLS006","facultyid": "CL006", "section": "A","stream": "Arts", "grade": "PUC II"},
+		{"classsectionid": "CLS007","facultyid": "CL006", "section": "B","stream": "Arts", "grade": "PUC II"}
+	]
 }

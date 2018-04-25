@@ -2,6 +2,7 @@
     [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" 
     [paginator]="false" rows="15" [responsive]="true">
   <p-header>Classes</p-header>
+  <p-column field="classsectionid" header="Id" [sortable]="false"></p-column>
   <p-column field="stream" header="Stream" [sortable]="false"></p-column>
   <p-column field="grade" header="Grade" [sortable]="false"></p-column>
   <p-column field="section" header="Section" [sortable]="false"></p-column>

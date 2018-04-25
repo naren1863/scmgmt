@@ -11,7 +11,7 @@ export class SubjectService {
     constructor(private http: HttpClient) { }
 
     getSubjects() {
-    return this.http.get<any>('assets/showcase/data/stream-grade-subject.json')
+    return this.http.get<any>('assets/showcase/data/subjects.json')
       .toPromise()
       .then(res => <Subject[]>res.data)
       .then(data => { return data; });

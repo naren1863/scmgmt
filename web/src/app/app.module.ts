@@ -35,7 +35,7 @@ import { SubjectsComponent } from '../pages/subjects/subjects';
 import { StudentsComponent } from '../pages/students/students';
 import { StaffsComponent } from '../pages/staffs/staffs';
 
-import { CarService } from '../pages/classes/carservice';
+import { ClassService } from '../pages/classes/classservice';
 import { SubjectService } from '../pages/subjects/subjectservice';
 import { StudentService } from '../pages/students/studentservice';
 import { StaffService } from '../pages/staffs/staffservice';
@@ -77,7 +77,7 @@ import { StaffService } from '../pages/staffs/staffservice';
     FieldsetModule, MegaMenuModule, SidebarModule,
     PanelMenuModule, HttpClientModule
   ],
-  providers: [CarService,  SubjectService, HttpClient, StudentService, StaffService],
+  providers: [ClassService,  SubjectService, HttpClient, StudentService, StaffService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

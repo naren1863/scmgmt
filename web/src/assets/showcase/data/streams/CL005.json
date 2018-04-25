@@ -1,0 +1,10 @@
+{
+    "data": [
+        {"facultyid": "CL001","stream": "Science", "grade": "PUC I"},
+		{"facultyid": "CL002","stream": "Commerce", "grade": "PUC I"},
+		{"facultyid": "CL003","stream": "Arts", "grade": "PUC I"},
+		{"facultyid": "CL004","stream": "Science", "grade": "PUC II"},
+		{"facultyid": "CL005","stream": "Commerce", "grade": "PUC II"},
+		{"facultyid": "CL006","stream": "Arts", "grade": "PUC II"}
+    ]
+}

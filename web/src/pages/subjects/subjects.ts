@@ -39,5 +39,5 @@ export class SubjectsComponent implements OnInit {
   
   class PrimeSubject implements Subject {
       
-      constructor(public stream?, public grade?, public subject?) {}
+      constructor( public stream?, public grade?, public subject?) {}
   }

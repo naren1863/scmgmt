@@ -1,0 +1,17 @@
+
+create boot project from spring.start.io website 
+gradle build - builds class files and creates jar file
+gradle bootRun - builds class files and brings up the server. [Does not create jar].
+
+For bringing only Node Server
+	- ng serve
+to redeploy => npm install
+
+
+Currently Working Folder: C:\Edrive\SMS\SMS\web, you should run ng serve from this folder
+
+Reference:
+Prime NG: https://www.primefaces.org/primeng/#/panel 
+
+to generate component
+ng generate component <component name>
