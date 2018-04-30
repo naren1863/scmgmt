@@ -11,9 +11,16 @@ export class StudentService {
     constructor(private http: HttpClient) { }
 
     getStudents() {
-    return this.http.get<any>('assets/showcase/data/students.json')
-      .toPromise()
-      .then(res => <Student[]>res.data)
-      .then(data => { return data; });
+        return this.http.get<any>('assets/showcase/data/students.json')
+          .toPromise()
+          .then(res => <Student[]>res.data)
+          .then(data => { return data; });
+    }
+
+    getClassSections() {
+        return this.http.get<any>('assets/showcase/data/class-section.json')
+          .toPromise()
+          .then(res => <Student[]>res.data)
+          .then(data => { return data; });
     }
 }

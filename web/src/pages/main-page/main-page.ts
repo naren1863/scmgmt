@@ -33,6 +33,7 @@ export class studCreateComponent extends BasePage {
   showSubjects:boolean = false;
   showStudents:boolean = false;
   showStaffs:boolean = false;
+  showSubStaffMapping:boolean = false;
 
   actionMessage = '';
   msgs: Message[] = [];
@@ -90,6 +91,7 @@ export class studCreateComponent extends BasePage {
       this.showSubjects = false;
       this.showStudents = false;
       this.showStaffs = false;
+      this.showSubStaffMapping=false;
     }
       
     if(msg == 'Subjects') {
@@ -97,6 +99,7 @@ export class studCreateComponent extends BasePage {
       this.showClasses = false;
       this.showStudents = false;
       this.showStaffs = false;
+      this.showSubStaffMapping=false;
     }
     
     if(msg == 'Students') {
@@ -104,12 +107,21 @@ export class studCreateComponent extends BasePage {
       this.showSubjects = false;
       this.showClasses = false;
       this.showStaffs = false;
+      this.showSubStaffMapping=false;
     }
     if(msg == 'Staffs') {
       this.showStudents = false;
       this.showSubjects = false;
       this.showClasses = false;
       this.showStaffs = true;
+      this.showSubStaffMapping=false;
+    }
+    if(msg == 'SubStaffMapping') {
+      this.showStudents = false;
+      this.showSubjects = false;
+      this.showClasses = false;
+      this.showStaffs = false;
+      this.showSubStaffMapping=true;
     }
 
     this.actionMessage = msg;
@@ -150,6 +162,11 @@ export class studCreateComponent extends BasePage {
                     command: (event) => { this.showProject('Non Teaching') }
                   },
               ]
+            },
+              {
+                label: 'Subject Staffs Mapping',
+                icon: 'fa-plus',
+                command: (event) => { this.showProject('SubStaffMapping') }
             }
           ]
       },

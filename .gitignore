@@ -59,4 +59,7 @@ typings/
 
 
 #intellij files.
-.idea
+.idea/
+
+#gradle hidden files
+.gradle/

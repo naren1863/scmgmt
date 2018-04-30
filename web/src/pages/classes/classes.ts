@@ -21,7 +21,20 @@ export class ClassesComponent implements OnInit {
       constructor(private carService: ClassService) { }
   
       ngOnInit() {
-          this.carService.getClassSsections().then(cars => this.cars = cars);
+
+        console.log("ClassesComponent: Before calling service");
+        console.log(this.cars);
+        this.carService.getClassSsections().then(cars => this.cars = cars);
+        console.log("ClassesComponent: After calling service");
+
+        
+         let car = new PrimeClass();
+          for(let prop in this.cars) {
+              console.log("For Loop!!");
+          }
+    console.log("ClassesComponent: End");
+
+         // this.carService.getClassSsections().then(cars => this.cars = cars);
       }
       
       showDialogToAdd() {
@@ -70,5 +83,5 @@ export class ClassesComponent implements OnInit {
   
   class PrimeClass implements Class {
       
-      constructor(public classsectionid?,public stream?, public grade?, public section?) {}
+      constructor(public classsectionid?,public facultyid?, public stream?, public grade?, public section?, public code?) {}
   }

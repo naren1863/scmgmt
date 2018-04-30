@@ -1,0 +1,26 @@
+
+<div class="withBorder">
+  Class Section drop down goes here..
+  <div>
+    Class: 
+    <p-dropdown [options]="classSectionList" [(ngModel)]="selectedClassSec" [placeholder]="Select-Class" 
+            (onFocus)=loadClassSections() (onChange)=loadSubjectsForClass() autoWidth=false></p-dropdown>
+  </div>
+    
+</div>
+<br>
+<div class="withBorder">
+
+    Selected Class: {{selectedClassSec}}
+    <br>
+    <p-dataTable [value]="substaffMappers" selectionMode="single" 
+    [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" 
+    [paginator]="false" rows="15" [responsive]="true">
+  <p-header>Classes</p-header>
+  <p-column field="subject" header="subject" [sortable]="false"></p-column>
+  <p-column field="subjectid" header="subjectid" [sortable]="false"></p-column>
+  
+</p-dataTable>
+
+
+</div>

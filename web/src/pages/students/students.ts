@@ -13,10 +13,10 @@ export class StudentsComponent implements OnInit {
       selectedStud: Student;
       students: Student[];
   
-      constructor(private subService: StudentService) { }
+      constructor(private studService: StudentService) { }
   
       ngOnInit() {
-          this.subService.getStudents().then(students => this.students = students);
+          this.studService.getStudents().then(students => this.students = students);
       }
       
       

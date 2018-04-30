@@ -25,6 +25,8 @@ import {
   InplaceModule, MessagesModule,DataListModule, FieldsetModule, MegaMenuModule, PanelMenuModule
 } from 'primeng/primeng';
 
+
+
 import { SidebarModule } from 'ng-sidebar';
 import {AppComponent} from './app.component';
 import {studCreateComponent} from '../pages/main-page/main-page';
@@ -34,11 +36,13 @@ import { ClassesComponent } from '../pages/classes/classes';
 import { SubjectsComponent } from '../pages/subjects/subjects';
 import { StudentsComponent } from '../pages/students/students';
 import { StaffsComponent } from '../pages/staffs/staffs';
+import { SubstaffmappingComponent } from '../pages/substaffmapping/substaffmapping';
 
 import { ClassService } from '../pages/classes/classservice';
 import { SubjectService } from '../pages/subjects/subjectservice';
 import { StudentService } from '../pages/students/studentservice';
 import { StaffService } from '../pages/staffs/staffservice';
+import { SubstaffmappingService } from '../pages/substaffmapping/substaffmappingservice';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,7 @@ import { StaffService } from '../pages/staffs/staffservice';
     SubjectsComponent,
     StudentsComponent,
     StaffsComponent,
+    SubstaffmappingComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,7 +82,7 @@ import { StaffService } from '../pages/staffs/staffservice';
     FieldsetModule, MegaMenuModule, SidebarModule,
     PanelMenuModule, HttpClientModule
   ],
-  providers: [ClassService,  SubjectService, HttpClient, StudentService, StaffService],
+  providers: [ClassService,  SubjectService, HttpClient, StudentService, StaffService, SubstaffmappingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
