@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Message } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { MenuItem } from 'primeng/primeng';
+import { SidebarModule } from 'primeng/primeng';
 
 import { BasePage } from '../base-page/base-page';
 @Component({
@@ -29,17 +30,21 @@ export class studCreateComponent extends BasePage {
   classess: SelectItem[]= [];
   classessList: string[] = [];
   
+  itemList: boolean[] = [];
+
   showClasses:boolean = true;
   showSubjects:boolean = false;
   showStudents:boolean = false;
   showStaffs:boolean = false;
   showSubStaffMapping:boolean = false;
+  showAttendance:boolean = false;
 
   actionMessage = '';
   msgs: Message[] = [];
 
   items: MenuItem[];
 
+  
   display: boolean = false;
   constructor(private router: Router) {
               super();
@@ -85,6 +90,9 @@ export class studCreateComponent extends BasePage {
   addStudent(){
     this.router.navigate(["student"]);
   }
+
+  
+
   showProject(msg){
     if(msg == 'Classes'){
       this.showClasses = true;
@@ -92,6 +100,7 @@ export class studCreateComponent extends BasePage {
       this.showStudents = false;
       this.showStaffs = false;
       this.showSubStaffMapping=false;
+      this.showAttendance=false;
     }
       
     if(msg == 'Subjects') {
@@ -100,6 +109,7 @@ export class studCreateComponent extends BasePage {
       this.showStudents = false;
       this.showStaffs = false;
       this.showSubStaffMapping=false;
+      this.showAttendance=false;
     }
     
     if(msg == 'Students') {
@@ -108,6 +118,7 @@ export class studCreateComponent extends BasePage {
       this.showClasses = false;
       this.showStaffs = false;
       this.showSubStaffMapping=false;
+      this.showAttendance=false;
     }
     if(msg == 'Staffs') {
       this.showStudents = false;
@@ -115,6 +126,7 @@ export class studCreateComponent extends BasePage {
       this.showClasses = false;
       this.showStaffs = true;
       this.showSubStaffMapping=false;
+      this.showAttendance=false;
     }
     if(msg == 'SubStaffMapping') {
       this.showStudents = false;
@@ -122,6 +134,15 @@ export class studCreateComponent extends BasePage {
       this.showClasses = false;
       this.showStaffs = false;
       this.showSubStaffMapping=true;
+      this.showAttendance=false;
+    }
+    if(msg == 'Attendance') {
+      this.showStudents = false;
+      this.showSubjects = false;
+      this.showClasses = false;
+      this.showStaffs = false;
+      this.showSubStaffMapping=false;
+      this.showAttendance=true;
     }
 
     this.actionMessage = msg;
@@ -180,6 +201,6 @@ export class studCreateComponent extends BasePage {
           icon: 'fa-edit',
           command: (event) => { this.showProject('Messaging')}
       }
-  ];
-}
+    ];
+  }
 }

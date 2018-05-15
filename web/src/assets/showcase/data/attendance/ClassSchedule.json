@@ -1,0 +1,18 @@
+{
+    "data": [
+        {"classscheduleid":"CLSC001", "staffname": "Deeksh", "staffid":"ST001", "calendarid": "20180513", "starttimeid": "TM001", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB001"},
+        {"classscheduleid":"CLSC001", "staffname": "Prajwal", "staffid":"ST002", "calendarid": "20180514", "starttimeid": "TM002", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB001"},
+        {"classscheduleid":"CLSC001", "staffname": "Kavi", "staffid":"ST003", "calendarid": "20180515", "starttimeid": "TM003", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB001"},
+        {"classscheduleid":"CLSC001", "staffname": "Shwetha", "staffid":"ST003", "calendarid": "20180516", "starttimeid": "TM001", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB002"},
+        {"classscheduleid":"CLSC001", "staffname": "Nitesh", "staffid":"ST004", "calendarid": "20180517", "starttimeid": "TM002", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB001"},
+        {"classscheduleid":"CLSC001", "staffname": "Deeksh", "staffid":"ST005", "calendarid": "20180518", "starttimeid": "TM003", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB002"},
+        {"classscheduleid":"CLSC001", "staffname": "Prasad", "staffid":"ST006", "calendarid": "20180519", "starttimeid": "TM004", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB003"},
+        {"classscheduleid":"CLSC001", "staffname": "Nitesh", "staffid":"ST007", "calendarid": "20180520", "starttimeid": "TM005", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A", "subjectid": "SUB001"},
+        {"classscheduleid":"CLSC001", "staffname": "Shwetha", "staffid":"ST008", "calendarid": "20180521", "starttimeid": "TM002", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A", "subjectid": "SUB002"},
+        {"classscheduleid":"CLSC001", "staffname": "Kavi", "staffid":"ST009", "calendarid": "20180522", "starttimeid": "TM005", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A", "subjectid": "SUB002"},
+        {"classscheduleid":"CLSC001", "staffname": "Prajwal", "staffid":"ST010", "calendarid": "20180523", "starttimeid": "TM002", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A", "subjectid": "SUB003"},
+        {"classscheduleid":"CLSC001", "staffname": "Deeksh", "staffid":"ST011", "calendarid": "20180524", "starttimeid": "TM006", "classsectionid": "CLS001", "classcode":"Sci-PU-I-A","subjectid": "SUB002"}
+    ]
+}
+
+
