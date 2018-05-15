@@ -6,6 +6,8 @@ import { SubstaffMapper } from '../substaffmapping/substaffmapper';
 import { Observable } from "rxjs/Rx";
 import {SubstaffmappingService} from '../substaffmapping/substaffmappingservice';
 import { HttpClient } from '@angular/common/http';
+import {ListboxModule} from 'primeng/primeng';
+import {DataTable} from 'primeng/primeng';
 
 @Component({
   selector: 'app-substaffmapping',
@@ -14,27 +16,25 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SubstaffmappingComponent implements OnInit {
 
-
-
-    displayDialog: boolean;
+      displayDialog: boolean;
       classSection: Class = new PrimeClass();
       selectedClassSec: String;
       classSections: Class[];
       classSectionList: any[];
+      staffs: any[];
+      staffList: any[];
 
       subjects: Subject[];
       subStaffMappers: SubstaffMapper[];
       substaffMapper: SubstaffMapper;
 
-
       constructor(private subStaffService: SubstaffmappingService, private http: HttpClient) { }
 
       ngOnInit() {
-        console.log("SubstaffmappingComponent: Before calling service");
-        console.log(this.classSections);
+          console.log(">> ngOnInit");
           this.subStaffService.getClassSsections().then(classSections => this.classSections = classSections);
-        console.log("SubstaffmappingComponent: After calling service");
-        console.log("SubstaffmappingComponent: End");
+          this.subStaffService.getStaffs().then(staffs => this.staffs = staffs);
+
       }
 
       loadClassSections(){
@@ -47,57 +47,57 @@ export class SubstaffmappingComponent implements OnInit {
           }
       }
 
-      loadSubjectsForClass(){
-        console.log("loadSubjectsForClass ");
-
-        
-           Observable.create(observer => {
-             this.http.get<any>('assets/showcase/data/subjects/'+this.selectedClassSec+'.json')
-            .finally(observer.complete())
-            .subscribe(data => {
-              let jsonRes = data.json();
-              console.log("In subscribe: " + jsonRes);
-              observer(data.token);
-             }, 
-              error => {
-                observer.error(error);
-                console.log(error)}
-            ).closed;
-          });
-
-
-          // this.http.get<any>('assets/showcase/data/subjects/'+this.selectedClassSec+'.json')
-            
-          //   .subscribe((data: Subject[]) => {
-          //     let jsonRes = data.keys;
-          //     console.log("In subscribe: " + jsonRes);
-          //     // jsonRes.forEach(element => {
-          //     //   console.log("For: " + element);
-          //     // });
-             
-          //    }, 
-          //     error => {
-               
-          //       console.log(error)}
-          //   );
-        
-        
-        
-          
-      //  this.subStaffService.getSubjectsForClass(this.selectedClassSec).then(subjects=> this.subjects = subjects);
-      //   console.log(this.subjects);
-      //   if(this.subjects && this.subjects.length > 0){
-      //     this.subjects.forEach(data => {
-      //        this.subStaffMappers.push(new PrimeSubjstaffMapper(data.subject, data.grade));
-      //        console.log("For Loop Working: " + data.subject);
-      //     });
-          
-      //   }
-        
-        
+      onRowSelect(event){
+          console.log(event);
+          if(event && event.data)
+            console.log("Data coming: " + event.data.subject);
       }
 
+      loadSubjectsForClass(){
+       this.subStaffService.getSubjectsForClass(this.selectedClassSec).subscribe(res => {
+        this.subStaffMappers = [];
+        for(let entry of res.data){
+            this.subStaffMappers.push(new PrimeSubjstaffMapper(entry.subject, entry.subjectid));
+        }
+       });
+      }
 
+      getStaffNames(){
+          this.staffList = [];
+          this.staffList.push({label: "--Select Staff--", value: null});
+          this.staffs.forEach(element =>{
+              this.staffList.push({label: element.fname, value: element.staffid});
+              //console.log(element.fname);
+              
+            });
+          return this.staffList;  
+      }
+
+      update(dt: DataTable){
+
+        dt.dataToRender
+        var theJSON = JSON.stringify(dt.dataToRender);
+        var uri = "data:application/json;charset=UTF-8," + encodeURIComponent(theJSON);
+        
+        var a = document.createElement('a');
+        a.href = uri;
+        a.innerHTML = "Right-click and choose 'save as...'";
+        document.body.appendChild(a);
+        //   dt.dataToRender.forEach((ele: PrimeSubjstaffMapper) => {
+        //     if(ele.staffid)
+        //         console.log(ele.staffid, ele.subject, ele.subjectid); 
+                
+        //           var theJSON = JSON.stringify(ele);
+        //           var uri = "data:application/json;charset=UTF-8," + encodeURIComponent(theJSON);
+                  
+        //           var a = document.createElement('a');
+        //           a.href = uri;
+        //           a.innerHTML = "Right-click and choose 'save as...'";
+        //           document.body.appendChild(a);
+        //   });
+       console.log(dt); 
+       
+      }
 }
 
 class PrimeClass implements Class {

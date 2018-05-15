@@ -1,0 +1,48 @@
+<div>
+    <div>
+      Select Staff: 
+      <p-dropdown [options]="staffList" [(ngModel)]="selectedStaffId" [placeholder]="Select-Staff" 
+           (onChange)=loadClasses() autoWidth=false></p-dropdown>
+
+      Select Class:      
+      <p-dropdown [options]="classList" [(ngModel)]="selectedClassId" [placeholder]="Select-Class" 
+            (onChange)=loadSubjects();loadStudentsForClass(); autoWidth=false></p-dropdown>     
+    </div>
+    <div>
+            Select Subject: 
+            <p-dropdown [options]="subjectList" [(ngModel)]="selectedSubjectId" [placeholder]="Select-Subject" 
+                 (onChange)=loadCalendars() autoWidth=false></p-dropdown>
+      
+            Select Calendar:      
+            <p-dropdown [options]="calendarList" [(ngModel)]="selectedCalendarId" [placeholder]="Select-Date" 
+                   autoWidth=false></p-dropdown>      
+    </div>
+</div>
+<br/>
+<div>  
+    Selected Staff: {{selectedStaffId}} , Selected Class: {{selectedClassId}} , 
+      Selected Subject: {{selectedSubjectId}} , Selected Date: {{selectedCalendarId}} 
+    <br/><br/>
+    <p-dataTable [value]="students" selectionMode="multiple" 
+        [(selection)]="selectedStuds" [paginator]="false" rows="15" [responsive]="false">
+        <p-header>Students</p-header>
+            <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+            <p-column field="studentid" header="StudentId" [editable]="false"></p-column>
+            <p-column field="fname" header="First Name" [sortable]="false"></p-column>
+            <p-column field="lname" header="Last Name" [sortable]="false"></p-column>
+        <p-footer>
+            <div class="ui-helper-clearfix" style="width:100%">
+            <button type="button" pButton style="float:left" [disabled]="selectedCalendarId == undefied"
+                (click)="recordAttendance()" label="Save"></button>
+            </div>
+        </p-footer>
+    </p-dataTable>
+</div>
+
+
+      
+      
+    
+  
+  
+  

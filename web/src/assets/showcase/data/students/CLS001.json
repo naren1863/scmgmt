@@ -1,0 +1,10 @@
+{
+    "data":[
+        {"studentid": "STUD0001","fname":"Deeksh","lname":"HugarCLS001","standard":"Sci-PU-I-A","dob":"20-1-2349","mail": "deek@gmail.com", "mobile": "9666696666","parentid": "123"},
+        {"studentid": "STUD0002","fname":"Prajwal","lname":"HugarCLS001","standard":"Sci-PU-I-A","dob":"20-1-2349","mail": "Prajwal@gmail.com", "mobile": "9666696666", "parentid": "124"},
+        {"studentid": "STUD0003","fname":"Nitesh","lname":"HugarCLS001","standard":"Sci-PU-I-A","dob":"20-1-2349","mail": "Nitesh@gmail.com", "mobile": "9666696666", "parentid": "124"},
+        {"studentid": "STUD0004","fname":"Shwetha","lname":"HugarCLS001","standard":"Sci-PU-I-A","dob":"20-1-2349","mail": "Shwetha@gmail.com", "mobile": "9666696666", "parentid": "125"},
+        {"studentid": "STUD0005","fname":"Prasad","lname":"HugarCLS001","standard":"Sci-PU-I-A","dob":"20-1-2349","mail": "Prasad@gmail.com", "mobile": "9666696666", "parentid": "125"},
+        {"studentid": "STUD0006","fname":"Praveen","lname":"HugarCLS001","standard":"Sci-PU-I-A","dob":"20-1-2349","mail": "Praveen@gmail.com", "mobile": "9666696666","parentid": "125"}
+    ]
+}

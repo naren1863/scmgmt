@@ -9,18 +9,32 @@
     
 </div>
 <br>
-<div class="withBorder">
 
+<div class="withBorder">
+    
     Selected Class: {{selectedClassSec}}
     <br>
-    <p-dataTable [value]="substaffMappers" selectionMode="single" 
-    [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" 
-    [paginator]="false" rows="15" [responsive]="true">
-  <p-header>Classes</p-header>
-  <p-column field="subject" header="subject" [sortable]="false"></p-column>
-  <p-column field="subjectid" header="subjectid" [sortable]="false"></p-column>
+    
+
+    <p-dataTable #dt [value]="subStaffMappers" [editable]="true">
+        <p-column field="subject" header="subject" [editable]="false"></p-column>
+        <p-column field="subjectid" header="subjectid" [editable]="false"></p-column>
+        <p-column field="staffid" header="Staff Names" [editable]="false">
+            <ng-template  let-col let-car="rowData" pTemplate="item">
+                <p-dropdown  [(ngModel)]="car[col.field]" [options]="getStaffNames()" 
+                  [autoWidth]="false" [style]="{'width':'100%'}" required="true"  appendTo="body">
+                  {{car.label}}
+                </p-dropdown>
+            </ng-template>
+        </p-column>
+        
+        
+    </p-dataTable>
+    <button type="button" pButton (click)="update(dt)" label="Save"></button>
+      
+  </div>
+    
+    
   
-</p-dataTable>
 
 
-</div>
