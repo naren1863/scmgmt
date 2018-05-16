@@ -22,12 +22,14 @@ import {
   DialogModule, RadioButtonModule,
   CalendarModule,  
   ConfirmDialogModule, DataTableModule,
-  InplaceModule, MessagesModule,DataListModule, FieldsetModule, MegaMenuModule, PanelMenuModule
+  InplaceModule, MessagesModule,DataListModule, 
+  FieldsetModule, MegaMenuModule, PanelMenuModule, 
+  ProgressSpinnerModule, SidebarModule
 } from 'primeng/primeng';
 
 
 
-import { SidebarModule } from 'ng-sidebar';
+//import { SidebarModule } from 'ng-sidebar';
 import {AppComponent} from './app.component';
 import {studCreateComponent} from '../pages/main-page/main-page';
 import {studDetailComponent} from '../pages/student/student';
@@ -37,6 +39,7 @@ import { SubjectsComponent } from '../pages/subjects/subjects';
 import { StudentsComponent } from '../pages/students/students';
 import { StaffsComponent } from '../pages/staffs/staffs';
 import { SubstaffmappingComponent } from '../pages/substaffmapping/substaffmapping';
+import { AttendanceComponent } from '../pages/attendance/attendances';
 
 import { ClassService } from '../pages/classes/classservice';
 import { SubjectService } from '../pages/subjects/subjectservice';
@@ -44,6 +47,7 @@ import { StudentService } from '../pages/students/studentservice';
 import { StaffService } from '../pages/staffs/staffservice';
 import { SubstaffmappingService } from '../pages/substaffmapping/substaffmappingservice';
 import { LoginService } from '../providers/login-service';
+import { AttendanceService} from '../pages/attendance/attendanceservice';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +59,7 @@ import { LoginService } from '../providers/login-service';
     StudentsComponent,
     StaffsComponent,
     SubstaffmappingComponent,
+    AttendanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,7 +87,9 @@ import { LoginService } from '../providers/login-service';
     FieldsetModule, MegaMenuModule, SidebarModule,
     PanelMenuModule, HttpClientModule
   ],
-  providers: [ClassService,  SubjectService, HttpClient, StudentService, StaffService, SubstaffmappingService, LoginService],
+  providers: [ClassService,  SubjectService, HttpClient, StudentService, 
+              StaffService, SubstaffmappingService, LoginService, AttendanceService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}

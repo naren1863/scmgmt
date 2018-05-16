@@ -1,0 +1,22 @@
+.withBorder {
+
+    
+    border-color: rgb(109, 95, 233);
+   
+    border-width: 2px;
+    border-style: groove;
+    border-radius: 2mm;
+
+  }
+
+
+  .withBorder1 {
+
+    border-color: rgb(95, 139, 197);
+    border-spacing: 10px;
+    padding: 10px;
+    border-width: 2px;
+    border-style: groove;
+    border-radius: 0mm;
+
+  }
