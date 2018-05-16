@@ -43,7 +43,7 @@ import { SubjectService } from '../pages/subjects/subjectservice';
 import { StudentService } from '../pages/students/studentservice';
 import { StaffService } from '../pages/staffs/staffservice';
 import { SubstaffmappingService } from '../pages/substaffmapping/substaffmappingservice';
-
+import { LoginService } from '../providers/login-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +82,7 @@ import { SubstaffmappingService } from '../pages/substaffmapping/substaffmapping
     FieldsetModule, MegaMenuModule, SidebarModule,
     PanelMenuModule, HttpClientModule
   ],
-  providers: [ClassService,  SubjectService, HttpClient, StudentService, StaffService, SubstaffmappingService],
+  providers: [ClassService,  SubjectService, HttpClient, StudentService, StaffService, SubstaffmappingService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
