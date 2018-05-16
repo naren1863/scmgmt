@@ -63,3 +63,6 @@ typings/
 
 #gradle hidden files
 .gradle/
+
+web/nodejs
+build

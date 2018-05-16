@@ -46,8 +46,8 @@ import { SubjectService } from '../pages/subjects/subjectservice';
 import { StudentService } from '../pages/students/studentservice';
 import { StaffService } from '../pages/staffs/staffservice';
 import { SubstaffmappingService } from '../pages/substaffmapping/substaffmappingservice';
+import { LoginService } from '../providers/login-service';
 import { AttendanceService} from '../pages/attendance/attendanceservice';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +88,8 @@ import { AttendanceService} from '../pages/attendance/attendanceservice';
     PanelMenuModule, HttpClientModule
   ],
   providers: [ClassService,  SubjectService, HttpClient, StudentService, 
-              StaffService, SubstaffmappingService, AttendanceService],
+              StaffService, SubstaffmappingService, LoginService, AttendanceService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}
