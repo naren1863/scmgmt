@@ -1,6 +1,10 @@
 .home-div {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10%;
+    grid-template-columns: 37% 280px 35%;
   }
+.login-box{
+  margin: 15px;
+}
   

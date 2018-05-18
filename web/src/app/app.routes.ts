@@ -8,6 +8,7 @@ import { ClassesComponent } from '../pages/classes/classes';
 import { StudentsComponent } from '../pages/students/students';
 import { StaffsComponent } from '../pages/staffs/staffs';
 import { SubjectsComponent } from '../pages/subjects/subjects';
+import { AttendanceComponent } from '../pages/attendance/attendances';
 const appRoutes: Routes = [
   { path: 'student', component: studDetailComponent },
   { path: 'main-page', component: studCreateComponent },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'subjects', component: SubjectsComponent},
   { path: 'students', component: StudentsComponent},
   { path: 'staffs', component: StaffsComponent},
+  { path: 'attendance', component: AttendanceComponent},
   { path: '**', component: WelcomestudComponent }
  
 ];
