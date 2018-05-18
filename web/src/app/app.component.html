@@ -26,12 +26,15 @@
                     <a [routerLink]="['/subjects']" (click)="menuActive = false">&#9679; Subjects</a>
                     <a [routerLink]="['/students']" (click)="menuActive = false">&#9679; Students</a>
                     <a [routerLink]="['/staffs']" (click)="menuActive = false">&#9679; Staffs</a>
-                    <a [routerLink]="['/chips']" (click)="menuActive = false">&#9679; Subject Staffs Mapping</a>
+                    <a [routerLink]="['/substaffmapping']" (click)="menuActive = false">&#9679; Subject Staffs Mapping</a>
                 </div>
 
                 <a id="button_menutitle" #buttonmenutitle [class.active-menuitem]="buttonmenutitle.id == activeMenuId" (click)="activeMenuId = (activeMenuId === buttonmenutitle.id ? null : buttonmenutitle.id)">
                     <span>Attendance</span>
                 </a>
+                <div [ngClass]="{submenushow: (buttonmenutitle.id == activeMenuId), 'submenuhide': (buttonmenutitle.id != activeMenuId)}">
+                    <a [routerLink]="['/attendances']" (click)="menuActive = false">&#9679; Student Attendance</a>
+                </div>
                 <a id="data_menutitle" #datamenutitle [class.active-menuitem]="datamenutitle.id == activeMenuId" (click)="activeMenuId = (activeMenuId === datamenutitle.id ? null : datamenutitle.id)">
                     <span>Messaging System</span>
                 </a>

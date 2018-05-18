@@ -31,10 +31,10 @@ export class SubstaffmappingComponent implements OnInit {
       constructor(private subStaffService: SubstaffmappingService, private http: HttpClient) { }
 
       ngOnInit() {
-          console.log(">> ngOnInit");
+          console.log(">> SubstaffmappingComponent ngOnInit");
           this.subStaffService.getClassSsections().then(classSections => this.classSections = classSections);
           this.subStaffService.getStaffs().then(staffs => this.staffs = staffs);
-
+          console.log("<< SubstaffmappingComponent ngOnInit");
       }
 
       loadClassSections(){
