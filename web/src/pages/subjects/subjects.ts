@@ -22,10 +22,38 @@ export class SubjectsComponent implements OnInit {
       
       
       onRowSelect(event) {
-          
           this.subject = this.cloneSubject(event.data);
           this.displayDialog = true;
       }
+
+      showDialogToAdd(){
+          this.displayDialog = true;
+      }
+
+      saveSubject(subject){
+        console.log(">> saveSubjects: ", subject);
+        let subs = [...this.subjects];
+        this.subject = this.cloneSubject(subject);
+        subs.push(this.subject);
+        this.subjects = subs;
+        
+        this.displayDialog = false;
+        this.subService.saveSubject(this.subject);
+        this.subject = null;
+      }
+
+      deleteSubject(subject){
+        console.log(">> deleteSubject: ", this.selectedSub);
+        let index = this.findSelectedSubIndex();
+        this.subjects = this.subjects.filter((val,i) => i!=index);
+        this.displayDialog = false;
+        this.selectedSub.isdeleted = true;
+        this.subService.deleteSubject(this.selectedSub);
+      }
+    
+    findSelectedSubIndex(): number {
+        return this.subjects.indexOf(this.selectedSub);
+    }
       
       cloneSubject(c: Subject): Subject {
           let sub = new PrimeSubject();
@@ -39,5 +67,7 @@ export class SubjectsComponent implements OnInit {
   
   class PrimeSubject implements Subject {
       
-      constructor( public stream?, public grade?, public subject?) {}
+      constructor( public subjectid?, public subject?, public desc?, public isdeleted=false) {
+          
+      }
   }

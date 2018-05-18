@@ -1,5 +1,6 @@
 export interface Subject {
-    stream?;
-    grade?;
+    subjectid?;
     subject?;
+    desc?;
+    isdeleted?;
 }
