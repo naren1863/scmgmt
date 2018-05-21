@@ -1,95 +1,56 @@
 {
 	"data": [{
 			"staffid": "STF0001",
-			"fname": "Deeksh",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
+			"fullname": "Deeksh Jeer",
+			"dob": "2018-05-22T18:30:00.000Z",
+			"gender": "Female",
 			"mail": "deek@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
+			"qualification": "BE",
+			"address": "Gangavathi"
 
 		},
 		{
 			"staffid": "STF0002",
-			"fname": "Prajwal",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
+			"fullname": "Prajwal Jeer",
+			"dob": "2018-05-22T18:30:00.000Z",
+			"gender": "Male",
+			"qualification": "BSc",
 			"mail": "Prajwal@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BSc",
-			"stream": "Mech."
+			"address": "Gangavathi"
 		},
 		{
 			"staffid": "STF0003",
-			"fname": "Nitesh",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
+			"fullname": "Nitesh Jeer",
+			"dob": "2018-05-22T18:30:00.000Z",
+			"gender": "Male",
 			"mail": "Nitesh@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
+			"qualification": "BE",
+			"address": "Gangavathi"
 		},
 		{
 			"staffid": "STF0004",
-			"fname": "Shwetha",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
+			"fullname": "Shwetha Jeer",
+			"dob": "2018-05-22T18:30:00.000Z",
+			"gender": "Female",
 			"mail": "Shwetha@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BCom",
-			"stream": "Mech."
+			"qualification": "BCom",
+			"address": "Gangavathi"
 		},
 		{
 			"staffid": "STF0005",
-			"fname": "Prasad",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
+			"fullname": "Prasad Jeer",
+			"dob": "2018-05-22T18:30:00.000Z",
+			"gender": "Male",
 			"mail": "Prasad@gmail.com",
 			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
-		},
-		{
-			"staffid": "STF0006",
-			"fname": "Praveen",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
-			"mail": "Praveen@gmail.com",
-			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
-		},
-		{
-			"staffid": "STF0007",
-			"fname": "Kavi",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
-			"mail": "Kavi@gmail.com",
-			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
-		},
-		{
-			"staffid": "STF0008",
-			"fname": "Kumar",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
-			"mail": "Kumar@gmail.com",
-			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
-		},
-		{
-			"staffid": "STF0009",
-			"fname": "Sowbhagya",
-			"lname": "Jeer",
-			"dob": "20-1-2349",
-			"mail": "Sowbhagya@gmail.com",
-			"mobile": "9666696666",
-			"degree": "BE",
-			"stream": "Mech."
+			"qualification": "BE",
+			"address": "Gangavathi"
 		}
 
 	]
 }
+

@@ -1,10 +1,12 @@
 export interface Staff {
-    staffid?,
-    fname?,
-    lname?,
-    dob?,
+    staffid: String,
+    fullname: String,
+    dob: Date, 
+    gender?,
+    qualification?,
     mail?,
     mobile?,
-    degree?,
-    stream?
+    address?,
+    password?,
+    isdeleted?
 }

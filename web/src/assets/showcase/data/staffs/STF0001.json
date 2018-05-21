@@ -1,8 +1,7 @@
 {
 	"data": [{
 			"staffid": "STF0001",
-			"fname": "Deeksh",
-			"lname": "Jeer",
+			"fullname": "Deeksh Jeer",
 			"dob": "20-1-2349",
 			"mail": "deek@gmail.com",
 			"mobile": "9666696666",

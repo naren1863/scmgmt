@@ -1,3 +1,21 @@
+Subject Page
+	confirmation message while deleting.
+	validation of fields
+	message after saving data.
+	delete button should just disable row. 
+
+Teacher
+	add cancel button to detail page. Done.
+	update the header in details page. Done.
+	disable fields while updating.
+	confirmation message while deleting.
+	validation of fields.
+	message after saving data.
+	fix date bug.
+
+
+
+
 Students Page:
 	Sorting Based on Names
 	Have dropdown for classes in the header with apply button.  Ex. SCI-PUCI-A, COM-PUCI-A. Should be filterable with classes.
