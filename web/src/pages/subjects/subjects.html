@@ -1,34 +1,43 @@
 <div class="border-panel"> 
-
+       
 <p-dataTable [value]="subjects" [(selection)]="selectedSub"
     [paginator]="false" rows="15" [responsive]="true">
 <p-header>Subjects</p-header>
-<p-column [style]="{'width':'38px'}" selectionMode="single"></p-column>
+
 <p-column field="subject" header="Subject Name" [sortable]="true"></p-column>
 <p-column field="desc" header="Description" [sortable]="true"></p-column>
+<p-column field="isdeleted">  
+    <ng-template let-col let-row="rowData" pTemplate="rowData">
+            <button type="button" pButton icon="fa-trash" 
+                style="float:left" (click)="deleteSubject(row)" label="Delete" *ngIf="row.isdeleted"></button>
+            <label *ngIf="!row.isdeleted">Deleted</label>   
+    </ng-template>
+  
+    
+</p-column>
 
 <p-footer>
     <div class="ui-helper-clearfix" style="width:100%">
         <button type="button" pButton icon="fa-plus" 
             style="float:left" (click)="showDialogToAdd()" label="Add"></button>
-        <button type="button" pButton icon="fa-check" 
-            style="float:left" (click)="deleteSubject()" label="Delete"></button>
+        
       </div>
 </p-footer>
 </p-dataTable>
-
+{{val}}
 </div>
 
 <p-dialog header="Subject Details" [(visible)]="displayDialog" 
     [responsive]="true" showEffect="fade" [modal]="true">
+    <p-messages severity="error" [(value)]="inlineMsgs" [closable]="false"></p-messages>
 <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="subject">
   <div class="ui-grid-row">
       <div class="ui-grid-col-4"><label for="subject">Subject Name</label></div>
-      <div class="ui-grid-col-8"><input pInputText id="subject" [(ngModel)]="subject.subject" /></div>
+      <div class="ui-grid-col-8"><input pInputText id="subject" [(ngModel)]="subject.subject" placeholder="Required" /></div>
   </div>
   <div class="ui-grid-row">
       <div class="ui-grid-col-4"><label for="desc">Description</label></div>
-      <div class="ui-grid-col-8"><input pInputText id="desc" [(ngModel)]="subject.desc" /></div>
+      <div class="ui-grid-col-8"><input pInputText id="desc" [(ngModel)]="subject.desc" placeholder="Required"/></div>
   </div> 
   
 </div>
@@ -39,4 +48,5 @@
   </div>
  </p-footer>
 </p-dialog> 
-
+<p-growl [value]="msgs" baseZIndex=1></p-growl>
+<p-confirmDialog header="Confirmation" icon="fa fa-trash" width="425"></p-confirmDialog>

@@ -1,21 +1,20 @@
 Subject Page
-	add cancel button to detail page.
-	update the header in details page.
-	disable fields while updating.
-	confirmation message while deleting.
-	validation of fields
-	message after saving data.
+	add cancel button to detail page. done.
+	confirmation message while deleting. Done.
 	delete button should just disable row. 
+	duplicate entry? 
 
 Teacher
 	add cancel button to detail page. Done.
 	update the header in details page. Done.
 	disable fields while updating. Done.
 	confirmation message while deleting. Done.
-	add * for required fields. validation of fields. Done.
+	add * for required fields. validation of fields. Done. handeled in different way.
 	message after saving data. Done.
+	add date restriction to DOB. Done.
 	fix date bug.
-	add date restriction to DOB.
+	any other validations? 
+		duplicate entry? 
 
 
 

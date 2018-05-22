@@ -21,11 +21,21 @@ export class StaffsComponent implements OnInit {
         activeIdx: number = -1;
         isNewStaff: boolean = false;
         detailPageTitle: String = "Add Teacher";
-
+        minDate: Date;
+        maxDate: Date;
+        minYear: number;
+        maxYear: number;
         constructor(private confirmationService: ConfirmationService, private staffService: StaffService) { }
     
         ngOnInit() {
             this.staffService.getStaffs().then(staffs => this.staffs = staffs);
+            this.maxDate = new Date();
+            this.maxDate.setFullYear(this.maxDate.getFullYear()-15, 11, 31);
+            this.minDate = new Date();
+            this.minDate.setFullYear(this.maxDate.getFullYear()-70, 0, 1);
+
+            this.maxYear = this.maxDate.getFullYear();
+            this.minYear = this.minDate.getFullYear();
         }
         
         showDialogToAdd(){
