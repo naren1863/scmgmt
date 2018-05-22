@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Staff} from '../staffs/staff';
 import {StaffService} from '../staffs/staffservice';
+import {ConfirmDialogModule} from 'primeng/primeng';
+import {ConfirmationService} from 'primeng/primeng';
+import {Message, MessagesModule, MessageModule} from 'primeng/primeng';
 
 @Component({
   selector: 'app-staffs',
@@ -9,6 +12,8 @@ import {StaffService} from '../staffs/staffservice';
 })
 export class StaffsComponent implements OnInit {
 
+        msgs: Message[] = [];
+        inlineMsgs: Message[] = [];
         displayDialog: boolean;
         staff: Staff = new PrimeStaff("", "", null);
         selectedStaff: Staff;
@@ -17,7 +22,7 @@ export class StaffsComponent implements OnInit {
         isNewStaff: boolean = false;
         detailPageTitle: String = "Add Teacher";
 
-        constructor(private staffService: StaffService) { }
+        constructor(private confirmationService: ConfirmationService, private staffService: StaffService) { }
     
         ngOnInit() {
             this.staffService.getStaffs().then(staffs => this.staffs = staffs);
@@ -43,6 +48,9 @@ export class StaffsComponent implements OnInit {
 
         saveStaff(staff){
             console.log(">> saveSubjects: ", staff);
+            if(!this.validate(staff)){
+                return false;
+            }
             let staffs = [...this.staffs];
             this.staff = this.cloneSubject(staff);
             if(this.isNewStaff){
@@ -52,34 +60,48 @@ export class StaffsComponent implements OnInit {
             }
             
             this.staffs = staffs;
-            
             this.displayDialog = false;
             this.staffService.saveStaff(this.staff);
             this.isNewStaff = false;
+            this.msgs = [{severity:'success', summary:'Saved', detail: staff.fullname + ' is saved'}];
             //this.staff = null;
+          }
+
+          validate(staff){
+            this.inlineMsgs =[];
+              if(!staff.fullname || staff.fullname.length == 0){
+                this.inlineMsgs.push({severity:'error', id:'gender', detail: 'Full Name field is Required'});
+              }
+              if(!staff.dob || staff.dob.length <= 0){
+                this.inlineMsgs.push({severity:'error', id:'gender', detail: 'Date of Birth field is Required'});
+              }
+              if(!staff.gender || staff.gender.length <= 0){
+                this.inlineMsgs.push({severity:'error', id:'gender', detail: 'Gender field is Required'});
+              }
+              if(this.inlineMsgs.length > 0){
+                  return false;
+              }
+              return true;
           }
     
           deleteStaff(staff){
+            this.confirmationService.confirm({
+                message: 'Are you sure that you want to perform this action?',
+                accept: () => {
+                    console.log(">> deleteStaff: ", staff);
+                    let index = this.findSelectedStaffIndex();
+                    console.log("-- deleteSubject: ", index);
+                    this.staffs = this.staffs.filter((val,i) => i!=index);
+                    staff.isdeleted = true;
+                
+                    this.staffService.deleteStaff(staff);
+                    this.msgs = [{severity:'success', summary:'Deleted', detail: staff.fullname + ' is deleted'}];
+                },
+                reject: () => {
+                    this.msgs = [{severity:'info', summary:'Rejected', detail:'Delete operation is cancelled'}];
+                }
+            });
             
-            console.log(">> deleteStaff: ", staff);
-            let index = this.findSelectedStaffIndex();
-            console.log("-- deleteSubject: ", index);
-            this.staffs = this.staffs.filter((val,i) => i!=index);
-            staff.isdeleted = true;
-           
-            this.staffService.deleteStaff(staff);
-          }
-
-          updateStaff(staff){
-            
-            console.log(">> updateStaff: ", staff);
-            this.staff = staff;
-            let index = this.findSelectedStaffIndex();
-            console.log("-- updateStaff: ", index);
-            this.staffs = this.staffs.filter((val,i) => i!=index);
-           
-           
-            this.staffService.deleteStaff(staff);
           }
 
           findSelectedStaffIndex(): number {

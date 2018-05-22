@@ -8,11 +8,12 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    constructor(private loginSerice: LoginService, private router: Router) {
-      const name = 'Ludvig'.toLowerCase();
-      document.getElementById('theme-css').setAttribute('href', 'assets/themes/' + name + '/theme.css');
-      if (!loginSerice.isLoggedIn()){
-        this.router.navigate(['/']);
+    constructor(private loginSerice: LoginService, private router: Router)
+     {
+        const name = 'Omega'.toLowerCase();
+        document.getElementById('theme-css').setAttribute('href', 'assets/themes/' + name + '/theme.css');
+        if (!loginSerice.isLoggedIn()){
+          this.router.navigate(['/']);
       }
     }
   

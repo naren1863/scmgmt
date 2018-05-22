@@ -1,4 +1,5 @@
 <div class="border-panel">
+    
     <div *ngIf="!displayDialog">
         <div>
                 <p-header style="float: right;">
@@ -19,7 +20,6 @@
                                 <div class="ui-g-6 ui-sm-6">Email: <span class="spanfont">{{staff.mail}}</span></div>
                                 <div class="ui-g-6 ui-sm-6">Mobile: <span class="spanfont">{{staff.mobile}}</span></div>
                                 <div class="ui-g-6 ui-sm-6">Address: <span class="spanfont">{{staff.address}}</span></div>
-                               
                             </div>
                             <div class="ui-g-12">
                                 <div class="ui-g-8 ui-sm-12"></div>
@@ -27,7 +27,7 @@
                                 <div class="ui-g-4 ui-sm-12" style="float: right;">
                                     <button type="button" pButton icon="fa-check" 
                                         style="float:left" (click)="showDialogToUpdate(staff)" label="Update"></button>
-                                    <button type="button" pButton icon="fa-minus" 
+                                    <button type="button" pButton icon="fa-trash" 
                                         style="float:left" (click)="deleteStaff(staff)" label="Delete"></button>
                                 </div>
                             </div>
@@ -36,14 +36,14 @@
             </div>
         </p-accordion>
     </div>
-
+    
     <div *ngIf="displayDialog">
     <div style="background-color: antiquewhite; padding: 10px; border: 1px coral 2px thick solid;">
             <span class="ui-panel-title" style="font-weight: bold">{{detailPageTitle}}</span>
     </div>
     <hr>
     <p-panel>
-        
+        <p-messages severity="error" [(value)]="inlineMsgs"></p-messages>
         <p-header>
             <div class="ui-helper-clearfix">
                 <span class="ui-panel-title">{{detailPageTitle}}</span>
@@ -52,21 +52,25 @@
         <div class="ui-grid-responsive ui-fluid" *ngIf="staff">
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="fullname">Full Name</label></div>
-                <div class="ui-grid-col-8"><input pInputText id="fullname" [(ngModel)]="staff.fullname" /></div>
+                <div class="ui-grid-col-8">
+                    <input type="text" pInputText id="fullname" [(ngModel)]="staff.fullname" [disabled]="!isNewStaff" placeholder="Required" class="ng-dirty ng-invalid"/>
+                </div>
             </div>
             <hr/>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="dob">Date of Birth</label></div>
-                <div class="ui-grid-col-8">
-                    <p-calendar [(ngModel)]="staff.dob" [showIcon]="true"></p-calendar>
+                <div class="ui-grid-col-8"> 
+                    <p-calendar id="dob" [(ngModel)]="staff.dob" [showIcon]="true" [disabled]="!isNewStaff" placeholder="Required"></p-calendar>
+                    
                 </div>
             </div> 
             <hr/>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4"><label for="gender">Gender</label></div>
                 <div class="ui-grid-col-8">
-                        <div class="ui-g-2"><p-radioButton name="Male" value="Male" label="Male" [(ngModel)]="staff.gender" inputId="opt1"></p-radioButton></div>
-                        <div class="ui-g-2"><p-radioButton name="Female" value="Female" label="Female" [(ngModel)]="staff.gender" inputId="opt2"></p-radioButton></div>
+                        <div class="ui-g-2"><p-radioButton name="Male" value="Male" label="Male" [(ngModel)]="staff.gender" inputId="opt1" [disabled]="!isNewStaff"></p-radioButton></div>
+                        <div class="ui-g-2"><p-radioButton name="Female" value="Female" label="Female" [(ngModel)]="staff.gender" inputId="opt2" [disabled]="!isNewStaff"></p-radioButton></div>
+                        
                 </div>
             </div>
             <hr/> 
@@ -88,25 +92,28 @@
             <div class="ui-grid-row">
                     <div class="ui-grid-col-4"><label for="desc">Address</label></div>
                     <div class="ui-grid-col-8">
-                        <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize" [(ngModel)]="staff.address"></textarea>
+                        <textarea pInputTextarea [rows]="3" [cols]="60" [(ngModel)]="staff.address"></textarea>
                     </div>
             </div> 
             <hr/>
             <div class="ui-grid-row">
                     <div class="ui-grid-col-4"><label for="desc">Password</label></div>
                     <div class="ui-grid-col-8">
-                        <input type="password" pPassword [(ngModel)]="staff.password"/>
+                        <input pPassword [(ngModel)]="staff.password"/>
                     </div>
             </div>
             <hr/>
             <p-footer>
                 <div class="ui-dialog-buttonpane">
-                <div class="ui-grid-row">
-                    <div class="ui-grid-col-6">
-                    <button pButton type="button" icon="fa-check" label="Save" class="ui-button-info" (click)="saveStaff(staff)"></button>
+                <div class="ui-grid-row" style="padding: 20px;">
+                    
+                    <!-- <div class="ui-grid-col-7">&nbsp;</div> -->
+                    <div class="ui-grid-col-6" style="padding: 2px;">
+                        <button pButton type="button" icon="fa-check" label="Save" class="ui-button-info" (click)="saveStaff(staff)"></button>
                     </div>
-                    <div class="ui-grid-col-6">
-                    <button pButton type="button" icon="fa-check" label="Cancel" class="ui-button-info" (click)="gotoListPage()"></button>
+                    
+                    <div class="ui-grid-col-6" style="padding: 2px;">
+                        <button pButton type="button" icon="fa-check" label="Cancel" class="ui-button-info" (click)="gotoListPage()"></button>
                     </div>
                 </div>
 
@@ -116,6 +123,11 @@
     </p-panel>
     </div>
 </div>
+
+<!-- <p-message severity="error" text="Field is required"></p-message> -->
+<p-growl [value]="msgs" baseZIndex=1></p-growl>
+<p-confirmDialog header="Confirmation" icon="fa fa-trash" width="425"></p-confirmDialog>
+
 <!-- <p-dialog header="Add Staff" [(visible)]="displayDialog" 
     [responsive]="true" showEffect="fade" [modal]="true">
 <div class="ui-grid ui-grid-responsive ui-g-12" *ngIf="staff">

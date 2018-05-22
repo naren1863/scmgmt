@@ -51,6 +51,9 @@ export class SubjectsComponent implements OnInit {
         this.subService.deleteSubject(this.selectedSub);
       }
     
+      gotoListPage(){
+          
+      }  
     findSelectedSubIndex(): number {
         return this.subjects.indexOf(this.selectedSub);
     }

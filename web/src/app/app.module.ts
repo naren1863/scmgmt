@@ -24,7 +24,9 @@ import {
   ConfirmDialogModule, DataTableModule,
   InplaceModule, MessagesModule,DataListModule, 
   FieldsetModule, MegaMenuModule, PanelMenuModule, 
-  ProgressSpinnerModule, SidebarModule
+  ProgressSpinnerModule, SidebarModule, MessageModule,
+
+  ConfirmationService
 } from 'primeng/primeng';
 
 
@@ -48,6 +50,9 @@ import { StaffService } from '../pages/staffs/staffservice';
 import { SubstaffmappingService } from '../pages/substaffmapping/substaffmappingservice';
 import { LoginService } from '../providers/login-service';
 import { AttendanceService} from '../pages/attendance/attendanceservice';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +93,8 @@ import { AttendanceService} from '../pages/attendance/attendanceservice';
     PanelMenuModule, HttpClientModule
   ],
   providers: [ClassService,  SubjectService, HttpClient, StudentService, 
-              StaffService, SubstaffmappingService, LoginService, AttendanceService],
+              StaffService, SubstaffmappingService, LoginService, AttendanceService,
+              ConfirmationService],
 
   bootstrap: [AppComponent]
 })
