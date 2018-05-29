@@ -1,51 +1,104 @@
-<p-dataTable [value]="cars" selectionMode="single" 
-    [(selection)]="selectedCar" (onRowSelect)="onRowSelect($event)" 
-    [paginator]="false" rows="15" [responsive]="true">
+<div class="border-panel">
+<p-dataTable [value]="classes"  [editable]="true" *ngIf="!displayDialog">
   <p-header>Classes</p-header>
-  <p-column field="classsectionid" header="Id" [sortable]="false"></p-column>
-  <p-column field="stream" header="Stream" [sortable]="false"></p-column>
-  <p-column field="grade" header="Grade" [sortable]="false"></p-column>
-  <p-column field="section" header="Section" [sortable]="false"></p-column>
-    <p-column field="code" header="code" [sortable]="false"></p-column>
-  <p-footer><div class="ui-helper-clearfix" style="width:100%">
-    <button type="button" pButton icon="fa-plus" style="float:left" (click)="showDialogToAdd()" label="Add"></button></div></p-footer>
+  <p-column field="classname" header="Class Name" [sortable]="false" [style]="{'width': '25%'}"></p-column>
+  <p-column field="classteacher" header="Class Teacher" [sortable]="false" [style]="{'width': '25%'}"></p-column>
+  <p-column field="subjects" header="Subjects" [style]="{'width': '43%'}">
+        <ng-template let-class="rowData"  pTemplate="item">        
+               {{getSubjects(class.subjects)}}
+        </ng-template>
+  </p-column>
+  <p-column  header="Actions" [style]="{'width': '8%', 'text-align': 'center'}">
+    <ng-template pTemplate="item" let-row="rowData">        
+        <i class="fa fa-pencil" (click)="showDialogToEdit(row)"></i>
+        &nbsp;
+        <i class="fa fa-trash"></i>
+    </ng-template>
+  </p-column>
+  <p-footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+        <button type="button" pButton icon="fa-plus" 
+            style="float:left" (click)="showDialogToAdd()" label="Add"></button>
+        
+      </div>
+  </p-footer>
 </p-dataTable>
 
 <p-dialog header="Class Details" [(visible)]="displayDialog" 
-        [responsive]="true" showEffect="fade" [modal]="true">
-  <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="car">
-      <div class="ui-grid-row">
-          <div class="ui-grid-col-4"><label for="stream">Stream</label></div>
-          <div class="ui-grid-col-8">
-              <select id="stream" [(ngModel)]="car.stream">
-                <option name="Science">Science</option>
-                <option name="Commerce">Commerce</option>
-                <option name="Arts">Arts</option>
-              </select>
-          </div>
-      </div>
-      <div class="ui-grid-row">
-          <div class="ui-grid-col-4"><label for="grade">Grade</label></div>
-          <div class="ui-grid-col-8">
-            <select id="grade" [(ngModel)]="car.grade">
-                <option name="PUC I">PUC I</option>
-                <option name="PUC II">PUC II</option>
-            </select>  
-          </div>
-      </div>
-      <div class="ui-grid-row">
-        <div class="ui-grid-col-4"><label for="section">Section</label></div>
-        <div class="ui-grid-col-8"><input pInputText id="section" [(ngModel)]="car.section" /></div>
-    </div>
-      <div class="ui-grid-row">
-          <div class="ui-grid-col-4"><label for="section">Code</label></div>
-          <div class="ui-grid-col-8"><input pInputText id="code" [(ngModel)]="car.code" /></div>
-      </div>
-  </div>
-  <p-footer>
-      <div class="ui-dialog-buttonpane ui-helper-clearfix">
-          <button type="button" pButton icon="fa-close" (click)="delete()" label="Delete"></button>
-          <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
-      </div>
-  </p-footer>
+        [responsive]="true" showEffect="fade" [modal]="true" [width]="800" [height]="500">
+  
+        <form [formGroup]="userform" (ngSubmit)="save(userform.value)" *ngIf="displayDialog">
+            <p-panel header="Add Class">
+                <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">
+                            Class Name *:
+                        </div>
+                        <div class="ui-grid-col-6">
+                            <input pInputText type="text" formControlName="classname" placeholder="Required"/>
+                        </div>
+                        <div class="ui-grid-col-4">
+                            <div class="ui-message ui-messages-error ui-corner-all" 
+                                *ngIf="!userform.controls['classname'].valid&&userform.controls['classname'].dirty">
+                                <i class="fa fa-close"></i>
+                                Class Name is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">
+                            Class Teacher *:
+                        </div>
+                        <div class="ui-grid-col-6">
+                            <!-- <input pInputText type="text" formControlName="classteacher" placeholder="Required"/> -->
+                            <p-dropdown #dd [options]="staffList" formControlName="classteacher" 
+                                placeholder="Select Teacher" [autoWidth]="false"></p-dropdown>
+                        </div>
+                        <div class="ui-grid-col-4">
+                            <div class="ui-message ui-messages-error ui-corner-all" 
+                                *ngIf="!userform.controls['classteacher'].valid&&userform.controls['classteacher'].dirty">
+                                <i class="fa fa-close"></i>
+                                Class Teacher is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid" style="margin: 10px 0px">
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2">
+                            Subjects *:
+                        </div>
+                        <div class="ui-grid-col-6">
+                            <!-- <input pInputText type="text" formControlName="classteacher" placeholder="Required"/> -->
+                            <p-listbox [options]="subjectList" formControlName="subjects" [multiple]="true"
+                                [styleClass]="nh-listbox" [listStyle]="{'max-height':'200px'}"> 
+                            </p-listbox>    
+                        </div>
+                        <div class="ui-grid-col-4">
+                            <div class="ui-message ui-messages-error ui-corner-all" 
+                                *ngIf="!userform.controls['subjects'].valid&&userform.controls['subjects'].dirty">
+                                <i class="fa fa-close"></i>
+                                Class Teacher is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-row">
+                        <div class="ui-grid-col-2"></div>
+                        <div class="ui-grid-col-6">
+                            <button pButton type="submit" label="Submit" [disabled]="!userform.valid"></button>
+                        </div>
+                        <div class="ui-grid-col-4"></div>
+                    </div>
+                    <div style="text-align:center;margin-top:20px" *ngIf="submitted">
+                        Form Submitted
+                        <br>
+                        {{diagnostic}}
+                    </div>
+                </div>
+            </p-panel>
+        </form>           
 </p-dialog>
+
+</div>

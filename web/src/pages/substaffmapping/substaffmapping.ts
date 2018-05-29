@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Class} from '../classes/class';
+import {Class} from '../substaffmapping/class';
 import { Subject } from '../subjects/subject';
 import { SubstaffMapper } from '../substaffmapping/substaffmapper';
 

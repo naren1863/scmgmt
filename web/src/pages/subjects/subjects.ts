@@ -75,7 +75,7 @@ export class SubjectsComponent implements OnInit {
                 let index = this.findSelectedSubIndex();
                 this.subjects = this.subjects.filter((val,i) => i!=index);
                 this.displayDialog = false;
-                subject.isdeleted = true;
+                subject.deleted = true;
 
                 let subs = [...this.subjects];
                 this.subject = this.cloneSubject(subject);
@@ -114,7 +114,7 @@ export class SubjectsComponent implements OnInit {
   
   class PrimeSubject implements Subject {
       
-      constructor( public subjectid?, public subject?, public desc?, public isdeleted=false) {
+      constructor( public subjectid?, public subject?, public desc?, public deleted=false) {
           
       }
   }

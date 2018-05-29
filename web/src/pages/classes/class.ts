@@ -1,8 +1,8 @@
+import {Subject} from '../subjects/subject';
 export interface Class {
-    classsectionid?;
-    facultyid?;
-    stream?;
-    grade?;
-    section?;
-    code?;
+    classid?;
+    classname?;
+    classteacher?;
+    subjects: Subject[];
+    
 }

@@ -1,11 +1,72 @@
 {
-    "data": [
-        {"classsectionid": "CLS001","facultyid": "CL001", "section": "A", "stream": "Science", "grade": "PUC I", "code": "Sci-PU-I-A"},
-		{"classsectionid": "CLS002","facultyid": "CL002", "section": "A", "stream": "Commerce", "grade": "PUC I", "code": "Com-PU-I-A"},
-		{"classsectionid": "CLS003","facultyid": "CL003", "section": "A", "stream": "Arts", "grade": "PUC I", "code": "Art-PU-I-A"},
-		{"classsectionid": "CLS004","facultyid": "CL004", "section": "A","stream": "Science", "grade": "PUC II", "code": "Sci-PU-II-A"},
-		{"classsectionid": "CLS005","facultyid": "CL005", "section": "A","stream": "Commerce", "grade": "PUC II", "code": "Com-PU-II-A"},
-		{"classsectionid": "CLS006","facultyid": "CL006", "section": "A","stream": "Arts", "grade": "PUC II", "code": "Art-PU-II-A"},
-		{"classsectionid": "CLS007","facultyid": "CL006", "section": "B","stream": "Arts", "grade": "PUC II", "code": "Art-PU-II-B"}
+	"data": [{
+			"classid": "CLS001",
+			"classname": "Science PUC I A",
+			"classteacher": "Deeks Jeer",
+			"subjects": [{
+				"subjectid":"SUB001",
+				"subject":"Physics"
+			},
+			{
+				"subjectid":"SUB002",
+				"subject":"Chemistry"
+			},{
+				"subjectid":"SUB001",
+				"subject":"Physics"
+			},
+			{
+				"subjectid":"SUB002",
+				"subject":"Chemistry"
+			},{
+				"subjectid":"SUB001",
+				"subject":"Physics"
+			},
+			{
+				"subjectid":"SUB002",
+				"subject":"Chemistry"
+			}],
+			"deleted": ""
+		},
+		{
+			"classid": "CLS002",
+			"classname": "Science PUC II A",
+			"classteacher": "Deeks Jeer",
+			"subjects": [{
+				"subjectid":"SUB003",
+				"subject":"Kannada"
+			},
+			{
+				"subjectid":"SUB002",
+				"subject":"Chemistry"
+			},
+			{
+				"subjectid":"SUB003",
+				"subject":"English"
+			}
+		]
+		},
+		{
+			"classid": "CLS003",
+			"classname": "Science PUC I A",
+			"classteacher": "Deeks Jeer",
+			"subjects": [{
+				"subjectid":"SUB004",
+				"subject":"Hindi"
+			},
+			{
+				"subjectid":"SUB002",
+				"subject":"Chemistry"
+			}]
+		},
+		{
+			"classid": "CLS004",
+			"classname": "Science PUC II B",
+			"classteacher": "Deeks Jeer",
+			"subjects": [{
+				"subjectid":"SUB002",
+				"subject":"Chemistry"
+			}]
+		}
+
 	]
 }

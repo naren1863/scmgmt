@@ -4,37 +4,32 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Class } from '../classes/class';
-
+import { Subject } from '../subjects/subject';
+import {Staff} from '../staffs/staff';
 @Injectable()
 export class ClassService {
 
     constructor(private http: HttpClient) { }
 
-    getClassSsections() {
+    getClasses() {
     return this.http.get<any>('assets/showcase/data/class-section.json')
       .toPromise()
       .then(res => <Class[]>res.data)
       .then(data => { return data; });
     }
 
-    getCarsMedium() {
-    return this.http.get<any>('assets/showcase/data/stream-grade-subject.json')
-      .toPromise()
-      .then(res => <Class[]>res.data)
-      .then(data => { return data; });
-    }
+    getSubjects() {
+      return this.http.get<any>('assets/showcase/data/subjects.json');
+        // .toPromise()
+        // .then(res => <Subject[]>res.data)
+        // .then(data => { return data; });
+      }
 
-    getCarsLarge() {
-    return this.http.get<any>('assets/showcase/data/cars-large.json')
-      .toPromise()
-      .then(res => <Class[]>res.data)
-      .then(data => { return data; });
-    }
-
-  getCarsHuge() {
-    return this.http.get<any>('assets/showcase/data/cars-huge.json')
-      .toPromise()
-      .then(res => <Class[]>res.data)
-      .then(data => { return data; });
-  }
+      getStaffs() {
+        return this.http.get<any>('assets/showcase/data/staffs.json');
+          // .toPromise()
+          // .then(res => <Staff[]>res.data)
+          // .then(data => { return data; });
+        }
+    
 }

@@ -1,15 +1,15 @@
 {
     "data": [
-        {"subjectid": "SUB001", "subject": "Physics", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB002", "subject": "Chemistry", "desc": "Chemistry", "isdeleted": "false"},
-		{"subjectid": "SUB003", "subject": "Maths", "desc": "Maths", "isdeleted": "false"},
-		{"subjectid": "SUB004", "subject": "Biology", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB005", "subject": "Statistics", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB006", "subject": "Computer Science", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB007", "subject": "Kannada", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB008", "subject": "Hindi", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB009", "subject": "English", "desc": "Physics", "isdeleted": "false"},
-		{"subjectid": "SUB010", "subject": "Sanskrit", "desc": "Physics", "isdeleted": "false"}
+        {"subjectid": "SUB001", "subject": "Physics", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB002", "subject": "Chemistry", "desc": "Chemistry", "deleted": "false"},
+		{"subjectid": "SUB003", "subject": "Maths", "desc": "Maths", "deleted": "false"},
+		{"subjectid": "SUB004", "subject": "Biology", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB005", "subject": "Statistics", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB006", "subject": "Computer Science", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB007", "subject": "Kannada", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB008", "subject": "Hindi", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB009", "subject": "English", "desc": "Physics", "deleted": "false"},
+		{"subjectid": "SUB010", "subject": "Sanskrit", "desc": "Physics", "deleted": "false"}
 		
 		
     ]

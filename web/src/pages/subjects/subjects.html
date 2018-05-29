@@ -1,19 +1,17 @@
 <div class="border-panel"> 
-       
-<p-dataTable [value]="subjects" [(selection)]="selectedSub"
-    [paginator]="false" rows="15" [responsive]="true">
+
+<p-dataTable [value]="subjects" 
+    [paginator]="false" rows="15" [responsive]="true" [resizableColumns]="true" columnResizeMode="fit">
 <p-header>Subjects</p-header>
 
-<p-column field="subject" header="Subject Name" [sortable]="true"></p-column>
-<p-column field="desc" header="Description" [sortable]="true"></p-column>
-<p-column field="isdeleted">  
-    <ng-template let-col let-row="rowData" pTemplate="rowData">
+<p-column field="subject" header="Subject Name" [sortable]="true" [style]="{'width':'40%'}"></p-column>
+<p-column field="desc" header="Description" [sortable]="true" [style]="{'width':'40%'}"></p-column>
+<p-column field="deleted" [style]="{'width':'5%', 'text-align': 'center'}">  
+    <ng-template let-col let-row="rowData" pTemplate="rowData" style="float: right;">
             <button type="button" pButton icon="fa-trash" 
-                style="float:left" (click)="deleteSubject(row)" label="Delete" *ngIf="row.isdeleted"></button>
-            <label *ngIf="!row.isdeleted">Deleted</label>   
+                style="float: center;" (click)="deleteSubject(row)"  *ngIf="!row.deleted"></button>
+             <i class="fa fa-remove" *ngIf="row.deleted" style="color: red;"></i>        
     </ng-template>
-  
-    
 </p-column>
 
 <p-footer>
@@ -24,7 +22,7 @@
       </div>
 </p-footer>
 </p-dataTable>
-{{val}}
+
 </div>
 
 <p-dialog header="Subject Details" [(visible)]="displayDialog" 

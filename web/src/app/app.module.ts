@@ -3,7 +3,8 @@ import {NgModule} from '@angular/core';
 import {HttpModule} from '@angular/http';
 import {appRouting} from './app.routes';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule} from '@angular/forms';
+import {Validators,FormControl,FormGroup,
+        FormBuilder, ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import {
@@ -26,7 +27,7 @@ import {
   FieldsetModule, MegaMenuModule, PanelMenuModule, 
   ProgressSpinnerModule, SidebarModule, MessageModule,
 
-  ConfirmationService
+  ConfirmationService,
 } from 'primeng/primeng';
 
 
@@ -64,8 +65,12 @@ import { AttendanceService} from '../pages/attendance/attendanceservice';
     StudentsComponent,
     StaffsComponent,
     SubstaffmappingComponent,
-    AttendanceComponent,
+    AttendanceComponent
+    
   ],
+
+
+
   imports: [
     BrowserModule,
     appRouting,
@@ -90,7 +95,7 @@ import { AttendanceService} from '../pages/attendance/attendanceservice';
     CalendarModule,ConfirmDialogModule, DataTableModule,
     InplaceModule, MessagesModule,DataListModule, 
     FieldsetModule, MegaMenuModule, SidebarModule,
-    PanelMenuModule, HttpClientModule
+    PanelMenuModule, HttpClientModule, ReactiveFormsModule
   ],
   providers: [ClassService,  SubjectService, HttpClient, StudentService, 
               StaffService, SubstaffmappingService, LoginService, AttendanceService,
