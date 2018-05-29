@@ -2,7 +2,7 @@
 <p-dataTable [value]="classes"  [editable]="true" *ngIf="!displayDialog">
   <p-header>Classes</p-header>
   <p-column field="classname" header="Class Name" [sortable]="false" [style]="{'width': '25%'}"></p-column>
-  <p-column field="classteacher" header="Class Teacher" [sortable]="false" [style]="{'width': '25%'}"></p-column>
+  <p-column field="classteacher.fullname" header="Class Teacher" [sortable]="false" [style]="{'width': '25%'}"></p-column>
   <p-column field="subjects" header="Subjects" [style]="{'width': '43%'}">
         <ng-template let-class="rowData"  pTemplate="item">        
                {{getSubjects(class.subjects)}}

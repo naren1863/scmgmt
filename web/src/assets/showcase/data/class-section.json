@@ -2,7 +2,7 @@
 	"data": [{
 			"classid": "CLS001",
 			"classname": "Science PUC I A",
-			"classteacher": "Deeks Jeer",
+			"classteacher": {"staffid": "STF0001", "fullname": "Deeksh Jeer"},
 			"subjects": [{
 				"subjectid":"SUB001",
 				"subject":"Physics"
@@ -13,24 +13,13 @@
 			},{
 				"subjectid":"SUB001",
 				"subject":"Physics"
-			},
-			{
-				"subjectid":"SUB002",
-				"subject":"Chemistry"
-			},{
-				"subjectid":"SUB001",
-				"subject":"Physics"
-			},
-			{
-				"subjectid":"SUB002",
-				"subject":"Chemistry"
 			}],
-			"deleted": ""
+			"isdeleted": "false"
 		},
 		{
 			"classid": "CLS002",
 			"classname": "Science PUC II A",
-			"classteacher": "Deeks Jeer",
+			"classteacher": {"staffid": "STF0002", "fullname": "Prajwal Jeer"},
 			"subjects": [{
 				"subjectid":"SUB003",
 				"subject":"Kannada"
@@ -48,7 +37,7 @@
 		{
 			"classid": "CLS003",
 			"classname": "Science PUC I A",
-			"classteacher": "Deeks Jeer",
+			"classteacher": {"staffid": "STF0002", "fullname": "Prajwal Jeer"},
 			"subjects": [{
 				"subjectid":"SUB004",
 				"subject":"Hindi"
@@ -61,7 +50,7 @@
 		{
 			"classid": "CLS004",
 			"classname": "Science PUC II B",
-			"classteacher": "Deeks Jeer",
+			"classteacher": {"staffid": "STF0002", "fullname": "Prajwal Jeer"},
 			"subjects": [{
 				"subjectid":"SUB002",
 				"subject":"Chemistry"

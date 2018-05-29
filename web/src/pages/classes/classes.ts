@@ -55,7 +55,7 @@ export class ClassesComponent implements OnInit {
       this.classService.getStaffs().subscribe(res => {
         let eleArray = res.data;
         for(let ele of eleArray){
-          this.staffList.push({"label": ele['fullname'], "value": ele['staffid']});
+          this.staffList.push({"label": ele.fullname, "value": ele});
         }
         console.log("<< Constructor", this.staffList);
 
@@ -96,22 +96,31 @@ export class ClassesComponent implements OnInit {
     showDialogToEdit(classInfo) {
       console.log(">> static subjects: ", this.staticSubjects);
       console.log(">> classInfo: ", classInfo);
-      this.newClass = true;
+      this.newClass = false;
+      this.selectedClass = classInfo;
+      this.userform = this.fb.group({
+        'classname': new FormControl(classInfo.classname, Validators.required),
+        'classteacher': new FormControl(classInfo.classteacher, Validators.required),
+       'subjects': new FormControl(classInfo.subjects, Validators.compose([Validators.required]))
+        
+    });
       //this.class = new PrimeClass();
       this.displayDialog = true;
   }
       showDialogToAdd() {
           this.newClass = true;
+          this.userform.reset();
           this.class = new PrimeClass();
           this.displayDialog = true;
       }
       
       save(classForm) {
+        console.log(">> ", classForm);
           let classes = [...this.classes];
           if(this.newClass)
             classes.push(classForm);
           else
-            classes[this.findSelectedCarIndex()] = this.class;
+            classes[this.findSelectedCarIndex()] = classForm;
           
           this.classes = classes;
           this.class = null;
