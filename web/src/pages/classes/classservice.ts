@@ -12,7 +12,7 @@ export class ClassService {
     constructor(private http: HttpClient) { }
 
     getClasses() {
-    return this.http.get<any>('assets/showcase/data/class-section.json')
+      return this.http.get<any>('assets/showcase/data/class-section.json')
       .toPromise()
       .then(res => <Class[]>res.data)
       .then(data => { return data; });
@@ -30,6 +30,17 @@ export class ClassService {
           // .toPromise()
           // .then(res => <Staff[]>res.data)
           // .then(data => { return data; });
-        }
+      }
     
+      saveClass(classInfo) {
+        console.log(">> Delete Classes");
+        var theJSON = JSON.stringify(classInfo);
+        console.log("-- stringify: ", theJSON);
+      }
+
+      deleteClass(classInfo) {
+        console.log(">> Delete Classes");
+        var theJSON = JSON.stringify(classInfo);
+        console.log("-- stringify: ", theJSON);
+      }
 }

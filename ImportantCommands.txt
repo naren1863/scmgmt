@@ -15,3 +15,13 @@ Prime NG: https://www.primefaces.org/primeng/#/panel
 
 to generate component
 ng generate component <component name>
+
+MySQL
+ 	to check if installed 
+	 	type -a mysql
+ 	to start mysql: 
+ 		cd cd /usr/local/bin
+		mysql.server start
+	to stop mysql: 
+ 		cd cd /usr/local/bin
+		mysql.server stop

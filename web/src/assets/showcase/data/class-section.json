@@ -2,60 +2,84 @@
 	"data": [{
 			"classid": "CLS001",
 			"classname": "Science PUC I A",
-			"classteacher": {"staffid": "STF0001", "fullname": "Deeksh Jeer"},
-			"subjects": [{
-				"subjectid":"SUB001",
-				"subject":"Physics"
+			"classteacher": {
+				"staffid": "STF0001",
+				"fullname": "Deeksh Jeer",
+				"dob": "2018-05-22T18:30:00.000Z",
+				"gender": "Female",
+				"mail": "deek@gmail.com",
+				"mobile": "9666696666",
+				"qualification": "BE",
+				"address": "Gangavathi"
 			},
-			{
-				"subjectid":"SUB002",
-				"subject":"Chemistry"
-			},{
-				"subjectid":"SUB001",
-				"subject":"Physics"
-			}],
+			"subjects": [
+				{"subjectid": "SUB001", "subject": "Physics", "desc": "Physics", "isdeleted": "false"},
+				{"subjectid": "SUB002", "subject": "Chemistry", "desc": "Chemistry", "isdeleted": "false"},
+				{"subjectid": "SUB003", "subject": "Maths", "desc": "Maths", "isdeleted": "false"}
+			],
 			"isdeleted": "false"
 		},
 		{
 			"classid": "CLS002",
 			"classname": "Science PUC II A",
-			"classteacher": {"staffid": "STF0002", "fullname": "Prajwal Jeer"},
-			"subjects": [{
-				"subjectid":"SUB003",
-				"subject":"Kannada"
+			"classteacher": {
+				"staffid": "STF0002",
+				"fullname": "Prajwal Jeer",
+				"dob": "2018-05-22T18:30:00.000Z",
+				"gender": "Male",
+				"qualification": "BSc",
+				"mail": "Prajwal@gmail.com",
+				"mobile": "9666696666",
+				"address": "Gangavathi"
 			},
-			{
-				"subjectid":"SUB002",
-				"subject":"Chemistry"
-			},
-			{
-				"subjectid":"SUB003",
-				"subject":"English"
-			}
-		]
+			"subjects": [
+				{"subjectid": "SUB001", "subject": "Physics", "desc": "Physics", "isdeleted": "false"},
+				{"subjectid": "SUB002", "subject": "Chemistry", "desc": "Chemistry", "isdeleted": "false"},
+				{"subjectid": "SUB003", "subject": "Maths", "desc": "Maths", "isdeleted": "false"},
+				{"subjectid": "SUB005", "subject": "Statistics", "desc": "Physics", "isdeleted": "false"}
+			],
+			"isdeleted": "false"
 		},
 		{
 			"classid": "CLS003",
 			"classname": "Science PUC I A",
-			"classteacher": {"staffid": "STF0002", "fullname": "Prajwal Jeer"},
-			"subjects": [{
-				"subjectid":"SUB004",
-				"subject":"Hindi"
+			"classteacher": {
+				"staffid": "STF0005",
+				"fullname": "Prasad Jeer",
+				"dob": "2018-05-22T18:30:00.000Z",
+				"gender": "Male",
+				"mail": "Prasad@gmail.com",
+				"mobile": "9666696666",
+				"qualification": "BE",
+				"address": "Gangavathi"
 			},
-			{
-				"subjectid":"SUB002",
-				"subject":"Chemistry"
-			}]
+			"subjects": [
+				{"subjectid": "SUB001", "subject": "Physics", "desc": "Physics", "isdeleted": "false"},
+				{"subjectid": "SUB002", "subject": "Chemistry", "desc": "Chemistry", "isdeleted": "false"},
+				{"subjectid": "SUB003", "subject": "Maths", "desc": "Maths", "isdeleted": "false"},
+				{"subjectid": "SUB005", "subject": "Statistics", "desc": "Physics", "isdeleted": "false"}
+			],
+			"isdeleted": "false"
 		},
 		{
 			"classid": "CLS004",
 			"classname": "Science PUC II B",
-			"classteacher": {"staffid": "STF0002", "fullname": "Prajwal Jeer"},
-			"subjects": [{
-				"subjectid":"SUB002",
-				"subject":"Chemistry"
-			}]
+			"classteacher": {
+				"staffid": "STF0002",
+				"fullname": "Prajwal Jeer",
+				"dob": "2018-05-22T18:30:00.000Z",
+				"gender": "Male",
+				"qualification": "BSc",
+				"mail": "Prajwal@gmail.com",
+				"mobile": "9666696666",
+				"address": "Gangavathi"
+			},
+			"subjects": [
+				{"subjectid": "SUB004", "subject": "Biology", "desc": "Physics", "isdeleted": "false"},
+				{"subjectid": "SUB005", "subject": "Statistics", "desc": "Physics", "isdeleted": "false"},
+				{"subjectid": "SUB006", "subject": "Computer Science", "desc": "Physics", "isdeleted": "false"}	
+			],
+			"isdeleted": "false"
 		}
-
 	]
 }

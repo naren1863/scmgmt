@@ -28,3 +28,41 @@ Students Page:
 	Later: 
 		Implement Import Logic.
 
+
+
+Person
+	Personal
+		first Name
+		last Name
+		Gender
+		DOB
+		Photo - Not Done
+	Qualification
+		Secondary Education{Board, Year Passed, %}
+		Pre-University {Board, Year Passed, %}
+		Graduation {Board, Year Passed, %}
+		Masters {Board, Year Passed, %}
+		Occupation{
+			Student
+			Salaried
+			Business Man
+			Service Man
+		}
+	Contact
+		Address
+		City
+		State
+		Pincode
+		Landline
+		Mobile
+		Email
+	Medical
+		BloodGroup
+		Height
+		Weight
+
+Best practices for table created.
+	make sure of column types.
+	see if create/update logging is required.
+	see if triggers are necessary.
+	
