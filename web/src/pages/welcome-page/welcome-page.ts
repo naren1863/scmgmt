@@ -4,6 +4,7 @@ import { Message } from 'primeng/primeng';
 import { SelectItem } from 'primeng/primeng';
 import { Router } from '@angular/router';
 import { LoginService } from '../../providers/login-service';
+import {User} from '../welcome-page/user';
 
 @Component({
   selector: 'app-welcome-page',
@@ -12,8 +13,7 @@ import { LoginService } from '../../providers/login-service';
 })
 export class WelcomestudComponent implements OnInit {
 
-  totalCost: number = 100;
-  totalCostSpinner: number = 300;
+  loginUser: User = new PrimeUser();
   constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit() {
@@ -24,7 +24,17 @@ export class WelcomestudComponent implements OnInit {
   }
 
   onLogin(){
-    this.loginService.setLogin(true);
-    this.router.navigate(["main-page"]);
+    console.log("onLogin: ", this.loginUser);
+    this.loginService.authenticate(this.loginUser);
+    console.log("onLogin:logged? ", this.loginService.isLoggedIn());
+    if(this.loginService.isLoggedIn()){
+      this.router.navigate(["main-page"]);
+    }
+    
   }
 }
+
+class PrimeUser implements User {
+  constructor(public username?, public password?){}
+}
+

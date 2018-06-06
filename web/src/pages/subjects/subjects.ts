@@ -3,6 +3,7 @@ import {Subject} from '../subjects/subject';
 import {SubjectService} from '../subjects/subjectservice';
 import {Message} from 'primeng/primeng'
 import {ConfirmationService} from 'primeng/primeng';
+import {Globals}  from 'app/global';
 @Component({
   selector: 'app-subjects',
   templateUrl: './subjects.html',
@@ -42,21 +43,30 @@ export class SubjectsComponent implements OnInit {
         }
         let subs = [...this.subjects];
         this.subject = this.cloneSubject(subject);
-        subs.push(this.subject);
-        this.subjects = subs;
+        if(this.subject.subjectId == undefined){
+            this.subject.createdBy = Globals.loggedInUser;
+        } else {
+            this.subject.updatedBy = Globals.loggedInUser;
+        }
+        
         
         this.displayDialog = false;
-        this.subService.saveSubject(this.subject);
+        this.subService.saveSubject(this.subject).subscribe(ele => {
+            this.subject = ele;
+            console.log("Saved Subject: ", this.subject);
+            subs.push(this.subject);
+            this.subjects = subs;
+        });
         this.msgs = [{severity:'success', summary:'Saved', detail: subject.subject + ' is saved'}];
         this.subject = null;
       }
 
       validate(subject){
         this.inlineMsgs =[];
-          if(!subject.subject || subject.subject.length == 0){
+          if(!subject.subjectName || subject.subjectName.length == 0){
             this.inlineMsgs.push({severity:'error', detail: 'Subject Name field is Required'});
           }
-          if(!subject.desc || subject.desc.length == 0){
+          if(!subject.subjectDescription || subject.subjectDescription.length == 0){
             this.inlineMsgs.push({severity:'error', detail: 'Description field is Required'});
           }
           if(this.inlineMsgs.length > 0){
@@ -66,8 +76,7 @@ export class SubjectsComponent implements OnInit {
       }
       val: String = "";
       deleteSubject(subject){
-        console.log(">> deleteSubject: ", this.selectedSub);
-        console.log(">> deleteSubject1: ", subject);
+        console.log(">> deleteSubject: ", subject);
         this.selectedSub = subject;
         this.confirmService.confirm({
             message: 'Are you sure that you want to perform this action?',
@@ -79,12 +88,15 @@ export class SubjectsComponent implements OnInit {
 
                 let subs = [...this.subjects];
                 this.subject = this.cloneSubject(subject);
+                this.subject.updatedBy = Globals.loggedInUser;
                 console.log("**: " , this.subject);
-                this.val = JSON.stringify(this.subject);
-                subs.push(this.subject);
-                this.subjects = subs;
-                this.subService.deleteSubject(this.selectedSub);
-                this.msgs = [{severity:'success', summary:'Deleted', detail: this.selectedSub.subject + ' is deleted'}];
+                this.subService.saveSubject(this.subject).subscribe(ele => {
+                    this.subject = ele;
+                    console.log("Deleted Subject: ", this.subject);
+                    subs.push(this.subject);
+                    this.subjects = subs;
+                });
+                this.msgs = [{severity:'success', summary:'Deleted', detail: this.subject.subjectName + ' is deleted'}];
             },
             reject: () => {
                 this.msgs = [{severity:'info', summary:'Rejected', detail:'Delete operation is cancelled'}];
@@ -114,7 +126,14 @@ export class SubjectsComponent implements OnInit {
   
   class PrimeSubject implements Subject {
       
-      constructor( public subjectid?, public subject?, public desc?, public deleted=false) {
+      constructor( 
+        public subjectId?, 
+        public subjectName?, 
+        public subjectDescription?, 
+        public deleted=false,
+        public createdBy='',
+        public updatedBy=''
+    ) {
           
       }
   }

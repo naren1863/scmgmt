@@ -48,6 +48,7 @@ dependencies {
     compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
     // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
     compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+	compile('org.projectlombok:lombok:1.16.16')
 
 
 
@@ -76,8 +77,10 @@ task installWebDependency(type: NpmTask) {
 	
 	task copyWeb(type: Copy) {
 		from 'web/dist/'
-		into '/build/resources/main/static'
+		into 'build/resources/main/static'
 	}
 	
 	processResources.dependsOn copyWeb
 	copyWeb.dependsOn buildWeb
+
+

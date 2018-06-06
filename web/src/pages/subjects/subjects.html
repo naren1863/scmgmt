@@ -4,8 +4,8 @@
     [paginator]="false" rows="15" [responsive]="true" [resizableColumns]="true" columnResizeMode="fit">
 <p-header>Subjects</p-header>
 
-<p-column field="subject" header="Subject Name" [sortable]="true" [style]="{'width':'40%'}"></p-column>
-<p-column field="desc" header="Description" [sortable]="true" [style]="{'width':'40%'}"></p-column>
+<p-column field="subjectName" header="Subject Name" [sortable]="true" [style]="{'width':'40%'}"></p-column>
+<p-column field="subjectDescription" header="Description" [sortable]="true" [style]="{'width':'40%'}"></p-column>
 <p-column field="deleted" [style]="{'width':'5%', 'text-align': 'center'}">  
     <ng-template let-col let-row="rowData" pTemplate="rowData" style="float: right;">
             <button type="button" pButton icon="fa-trash" 
@@ -30,12 +30,12 @@
     <p-messages severity="error" [(value)]="inlineMsgs" [closable]="false"></p-messages>
 <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="subject">
   <div class="ui-grid-row">
-      <div class="ui-grid-col-4"><label for="subject">Subject Name</label></div>
-      <div class="ui-grid-col-8"><input pInputText id="subject" [(ngModel)]="subject.subject" placeholder="Required" /></div>
+      <div class="ui-grid-col-4"><label for="subjectName">Subject Name</label></div>
+      <div class="ui-grid-col-8"><input pInputText id="subject" [(ngModel)]="subject.subjectName" placeholder="Required" /></div>
   </div>
   <div class="ui-grid-row">
-      <div class="ui-grid-col-4"><label for="desc">Description</label></div>
-      <div class="ui-grid-col-8"><input pInputText id="desc" [(ngModel)]="subject.desc" placeholder="Required"/></div>
+      <div class="ui-grid-col-4"><label for="subjectDescription">Description</label></div>
+      <div class="ui-grid-col-8"><input pInputText id="desc" [(ngModel)]="subject.subjectDescription" placeholder="Required"/></div>
   </div> 
   
 </div>

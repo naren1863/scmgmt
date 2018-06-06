@@ -1,6 +1,8 @@
 export interface Subject {
-    subjectid?;
-    subject?;
-    desc?;
-    deleted?;
+    subjectId?;
+    subjectName?;
+    subjectDescription?;
+    deleted: boolean;
+    createdBy: string;
+    updatedBy: string;
 }
