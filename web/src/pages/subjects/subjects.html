@@ -8,9 +8,8 @@
 <p-column field="subjectDescription" header="Description" [sortable]="true" [style]="{'width':'40%'}"></p-column>
 <p-column field="deleted" [style]="{'width':'5%', 'text-align': 'center'}">  
     <ng-template let-col let-row="rowData" pTemplate="rowData" style="float: right;">
-            <button type="button" pButton icon="fa-trash" 
-                style="float: center;" (click)="deleteSubject(row)"  *ngIf="!row.deleted"></button>
-             <i class="fa fa-remove" *ngIf="row.deleted" style="color: red;"></i>        
+        <i class="fa fa-trash" (click)="deleteSubject(row)" *ngIf="!row.deleted"></i>
+        <i class="fa fa-remove" style="color: red;" *ngIf="row.deleted"></i>
     </ng-template>
 </p-column>
 

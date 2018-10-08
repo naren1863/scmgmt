@@ -10,11 +10,10 @@ export class SubjectService {
 
     constructor(private http: HttpClient) { }
 
-    getSubjects() {
-      return this.http.get<any>('assets/showcase/data/subjects.json')
-        .toPromise()
-        .then(res => <Subject[]>res.data)
-        .then(data => { return data; });
+    getSubjects() : Observable<any> {
+      return this.http.get('/ui/service/getSubjects');
+  
+
     }
 
     saveSubject(subject): Observable<Subject> {

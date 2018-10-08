@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("ui/service")
 @Api(tags = "SMS Services", produces = "application/json")
@@ -39,5 +41,21 @@ public class SMSController
         Subject subjectResponse = subjectService.saveSubject(subjectRequest);
         System.out.println("save subject: Response: " + subjectResponse);
         return new ResponseEntity<Subject>(subjectResponse, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/getSubjects", method = RequestMethod.GET,
+            produces = {MediaType.APPLICATION_JSON_VALUE })
+    @ApiOperation(value = "Fetch All Subjects", notes = "Fetch All Subjects", response = Object.class, responseContainer = "List")
+    @ApiResponses(value = { @ApiResponse(code = 400, message = "Request contained data that was invalid"),
+            @ApiResponse(code = 200, message = "Subjects Fetched"), @ApiResponse(code = 401, message = "Unauthorized"),
+            @ApiResponse(code = 403, message = "Forbidden") })
+    //@ApiImplicitParams(value = {
+      //      @ApiImplicitParam(name = "SubjectData", value = "Subject JSON", required = true, dataType = "Subject", paramType = "body") })
+    public ResponseEntity<?> getSubjects()
+    {
+        System.out.println("SubjectController: getSubjects Rest service called!!");
+        List<Subject> subjectListResponse = subjectService.getSubjects();
+        System.out.println("SubjectController:getSubjects: Response: " + subjectListResponse);
+        return new ResponseEntity<List<Subject>>(subjectListResponse, HttpStatus.OK);
     }
 }

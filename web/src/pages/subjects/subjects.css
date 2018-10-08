@@ -1,0 +1,12 @@
+.fa {
+    color : rgb(62, 160, 221);
+  }
+
+  /* .fa-trash {
+    color : red;
+  } */
+
+  .nh-listbox{
+    scroll-behavior: auto;
+
+  }

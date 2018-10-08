@@ -21,7 +21,27 @@ export class SubjectsComponent implements OnInit {
       constructor(private confirmService: ConfirmationService, private subService: SubjectService) { }
   
       ngOnInit() {
-          this.subService.getSubjects().then(subjects => this.subjects = subjects);
+          console.log("Subjects.ngOnInit enters");
+          this.subjects = [];
+          let subs = [...this.subjects];
+          this.subService.getSubjects()
+            .subscribe((res) => {
+                let jsonRes = res;
+                console.log("res -->" + res);
+              
+                jsonRes.forEach(element => {
+                    let subjectObj = new Subject(element);
+                    subs.push(subjectObj);
+                });
+                this.subjects = subs;
+                console.log("subs --> " + subs);
+                console.log("this.subjects --> " + this.subjects);
+            });
+          
+          
+          
+            console.log("Subjects.ngOnInit exits");
+         
       }
       
       

@@ -2,9 +2,9 @@
     color : rgb(62, 160, 221);
   }
 
-  .fa-trash {
-    color : red;
-  }
+  /* .fa-trash {
+    color : rgb(62, 160, 221);
+  } */
 
   .nh-listbox{
     scroll-behavior: auto;
