@@ -16,6 +16,18 @@ Prime NG: https://www.primefaces.org/primeng/#/panel
 to generate component
 ng generate component <component name>
 
+Windows command
+Install Git for Git Bash
+Install Node
+
+Installing Angular
+	npm install -g @angular/cli
+
+Connect to MySQL
+        mysql -u root -p (without password)
+	mysql -u root -p (with password)
+	
+Linux Commands
 MySQL
  	to check if installed 
 	 	type -a mysql
